@@ -4,7 +4,7 @@ import org.fao.fi.commons.FigisException;
 
 public enum FactsheetLanguage {
 
-	en, fr, zh, es, ar;
+	en, fr, zh, es, ar, ru;
 
 	public static FactsheetLanguage parseLanguage(String factsheetLanguage) {
 		FactsheetLanguage list[] = FactsheetLanguage.values();

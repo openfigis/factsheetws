@@ -5,7 +5,6 @@
 	<groupId>org.fao.figis</groupId>
 	<artifactId>factsheet-domain</artifactId>
 	<name>factsheet-domain</name>
-	<version>0.0.6</version>
 	<description></description>
 	<url>factsheet-domain</url>
 	<build>
@@ -70,4 +69,10 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>factsheet</artifactId>
+		<version>0.0.6</version>
+		<relativePath>..</relativePath>
+	</parent>
 </project>

@@ -8,8 +8,11 @@ public enum FactsheetDomain {
 	resource, fishery, fishtech, geartype, vesseltype, species, topic, introsp,
 
 	// static domains
-	area, collection, countrysector, equipment, legalframework, ontology, org, psm, vmsprogramme, vmstopic, culturespecies;
+	area, collection, countrysector, equipment, legalframework, ontology, org, psm,  culturespecies;
 
+	
+
+	
 	public static FactsheetDomain parseDomain(String factsheetDomain) {
 		if (factsheetDomain == null) {
 			throw new FigisException("factsheetDomain is empty");
