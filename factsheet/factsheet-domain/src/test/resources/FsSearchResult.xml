@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fint:FsSearchResult xmlns:fint="http://www.fao.org/fi/figis/internal/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	rowcount="1" time="10">
+	<fint:ResultItem fid="1625313278" mid="1015" rating="100" status="3" ds="staticxml.vmstopic" name="Security of VMS information"
+		type="weblink" url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=14_Security_Of_VMS_Information.xml&amp;lang=en" />
+</fint:FsSearchResult> 

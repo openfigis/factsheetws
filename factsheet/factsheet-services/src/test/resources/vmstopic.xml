@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fint:FsSearchResult xmlns:fint="http://www.fao.org/fi/figis/internal/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" rowcount="16" time="0">
+	<fint:ResultItem FID="1625313278" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Security of VMS information" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=14_Security_Of_VMS_Information.xml&amp;lang=en" />
+	<fint:ResultItem FID="1688773036" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Introduction to VMS" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=2_Introduction_to_VMS.xml&amp;lang=en" />
+	<fint:ResultItem FID="1723216304" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Benefits of VMS" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=4_Benefits_of_VMS.xml&amp;lang=en" />
+	<fint:ResultItem FID="1791810797" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Shipboard VMS equipment" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=8_Shipboard_VMS_Equipment.xml&amp;lang=en" />
+	<fint:ResultItem FID="1914709991" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Other VMS and MCS information" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=17_FAO_VMS_And_MCS_Information.xml&amp;lang=en" />
+	<fint:ResultItem FID="-1677217825" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Limitations of VMS" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=6_Limitations_Of_VMS.xml&amp;lang=en" />
+	<fint:ResultItem FID="-1570149337" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Using VMS to transmit ancillary data" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=12_Using_VMS_To_Transmit_Ancillary_Information.xml&amp;lang=en" />
+	<fint:ResultItem FID="-892935614" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Worldwide VMS Programmes" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=3_Worldwide_VMS_Programmes.xml&amp;lang=en" />
+	<fint:ResultItem FID="-743164598" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="FAO VMS contact" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=16_FAO_VMS_Contact.xml&amp;lang=en" />
+	<fint:ResultItem FID="-537908713" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="VMS communications systems" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=9_VMS_Communications_Systems.xml&amp;lang=en" />
+	<fint:ResultItem FID="-425606178" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="VMS fishery monitoring centre" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=10_VMS_Fishery_Monitoring_Centre.xml&amp;lang=en" />
+	<fint:ResultItem FID="-174591509" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Enhancing VMS with remote sensing" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=13_Enhancing_VMS_With_Remote_Sensing.xml&amp;lang=en" />
+	<fint:ResultItem FID="364428224" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Fishing vessel monitoring systems" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=VMS_Home.xml&amp;lang=en" />
+	<fint:ResultItem FID="629930043" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Legal frameworks for VMS" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=11_Legal_Frameworks_For_VMS.xml&amp;lang=en" />
+	<fint:ResultItem FID="642914913" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Safety aspects of VMS" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=5_Safety_Aspects_of_VMS.xml&amp;lang=en" />
+	<fint:ResultItem FID="1144389245" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="Sharing of VMS information" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=15_Sharing_Of_VMS_Information.xml&amp;lang=en" />
+	<fint:ResultItem FID="1184173473" MID="1015" Rating="100" Status="3"
+		ds="staticxml.vmstopic" name="VMS components" type="weblink"
+		url="/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=7_VMS_Components.xml&amp;lang=en" />
+</fint:FsSearchResult>

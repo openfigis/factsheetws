@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  <title>Factsheet Webservice</title>
+  <meta content="Erik van Ingen" name="author">
+</head>
+<body>
+<br style="color: rgb(0, 153, 0);">
+<div style="text-align: center; color: rgb(0, 153, 0);"><br>
+<br>
+<big><big><big><span style="font-family: Palatino Linotype;">Welcome to
+the &nbsp;<span style="font-weight: bold;">factsheet</span></span><span
+ style="font-family: Palatino Linotype; font-weight: bold;">-web
+</span><span style="font-family: Palatino Linotype;">webservice
+application<br>
+<br>
+</span></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"><small><small>This
+is the a REST based webservice using <a
+ href="http://www.fao.org/fi/figis/devcon/schema/webservice/factsheets.xsd">this</a>
+xml schema. Go&nbsp;</small></small></span></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"></span></big></big></big><big><big><big><a
+ href="http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice"><small><small>here</small></small></a></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"><small><small>
+to for more
+documentation. <br>
+Now added a&nbsp;<a href="apidocs/index.html">java client</a>. <br>
+</small></small></span></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"></span></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"></span></big></big></big><br>
+<table
+ style="width: 1064px; height: 500px; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ style="color: rgb(0, 153, 0); vertical-align: middle; width: 645px;"><b>URL</b></td>
+      <td style="color: rgb(0, 153, 0); width: 125px;"><b>Resource</b></td>
+      <td style="color: rgb(0, 153, 0); width: 396px;"><b>Description</b></td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a href="domain/">domain/</a></td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">DomainList</td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">List of all the
+domains. </td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a href="domain/resource">domain/{domain}</a></td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">FactsheetList</td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">List
+of the factsheets in all
+languages for the given domain.</td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a href="domain/resource/language">domain/{domain}/language</a></td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">FactsheetList<br>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">,,</td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a href="domain/resource/language/en">domain/{domain}/language/{language}</a></td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">FactsheetList</td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">List
+of the factsheets in all
+languages for the given domain and language.</td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a href="domain/resource/factsheet">domain/{domain}/factsheet</a><br>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">FactsheetList<span
+ style="font-weight: bold;"> &nbsp; &nbsp;</span><br>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">List
+of the factsheets in all
+languages for the given domain. <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a
+ href="domain/resource/factsheet/10315">domain/{domain}/factsheet/{factsheet}</a></td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">LanguageList<br>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">List
+of the available
+languages for that factsheet, given the domain.</td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span
+ style="text-decoration: underline;"></span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a
+ href="domain/resource/factsheet/10315/language">domain/{domain}/factsheet/{factsheet}/language</a>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">LanguageList</td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">,,<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span
+ style="text-decoration: underline;"></span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a
+ href="domain/resource/factsheet/10315/language/en">domain/{domain}/factsheet/{factsheet}/language/{language}</a>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">Factsheet<br>
+      </td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">The
+actual factsheet, given
+the factsheet, domain and language.</td>
+    </tr>
+    <tr>
+      <td style="width: 125px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 645px;"><a
+ href="domain/resource/factsheet/10314/language/en/xpath/FIGISDoc/AqRes/AqResIdent">domain/{domain}/factsheet/{factsheet}/language/{language}/xpath/{xpath}</a><a
+ href="domain/resource/factsheet/10314/language/en/xpath/fi:FIGISDoc/fi:AqRes/fi:AqResStateTrend"></a><a
+ href="domain/resource/factsheet/10314/language/en/xpath/fi:FIGISDoc/fi:AqRes/fi:AqResStateTrend"><br>
+      </a> </td>
+      <td style="color: rgb(0, 153, 0); width: 125px;">Node</td>
+      <td style="color: rgb(0, 153, 0); width: 396px;">The xpath result
+given the xpath
+expression,&nbsp;<span style="font-weight: bold;"></span>factsheet,
+domain, and language. The xpath expression can go up to 5 levels
+deep.&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; ____&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td><a
+ href="domain/resource/factsheet/10102/language/en/xpathdescendant/StandardExploitRate">domain/{domain}/factsheet/{factsheet}/language/{language}/xpathdescendant/{xpathdescendant}</a></td>
+      <td style="color: rgb(0, 153, 0);">NodeList</td>
+      <td style="color: rgb(0, 153, 0);">Given the name of an element,
+this operation returns whatever element including its descendants. </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+version 0.0.5<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.fao.org/fishery/factsheets/search/fint" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:fint="http://www.fao.org/fishery/factsheets/search/fint">
+	<complexType name="FsSearchResultType">
+		<sequence>
+			<element ref="fint:ResultItem" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+		<attribute name="rowcount" type="int"></attribute>
+		<attribute name="time" type="int"></attribute>
+	</complexType>
+
+	<complexType name="ResultItemType">
+		<attribute name="FID" type=" int"></attribute>
+		<attribute name="MID" type=" int"></attribute>
+		<attribute name="Rating" type=" int"></attribute>
+		<attribute name="Status" type=" int"></attribute>
+		<attribute name="ds" type="string"></attribute>
+		<attribute name="name" type="string"></attribute>
+		<attribute name="type" type="string"></attribute>
+		<attribute name="url" type="string"></attribute>
+	</complexType>
+	<element name="ResultItem" type="fint:ResultItemType"></element>
+
+	<element name="FsSearchResult" type="fint:FsSearchResultType"></element>
+</schema>

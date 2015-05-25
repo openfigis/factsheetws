@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fint:ResultItem xmlns:fint="http://www.fao.org/fi/figis/internal/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	fid="658099411" 
+	mid="1009" 
+	rating="100"
+	Status="3" 
+	ds="staticxml.equipment" 
+	name="medinapanels.xml" 
+	type="weblink"
+	url="/fi/website/FIRetrieveAction.do?dom=equipmentxml=medinapanels.xmllang=en" />
+

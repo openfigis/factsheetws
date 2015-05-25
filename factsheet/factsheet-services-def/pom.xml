@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.fao.figis</groupId>
+	<artifactId>factsheet-services-def</artifactId>
+	<name>factsheet-services-def</name>
+	<version>0.0.2</version>
+	<packaging>jar</packaging>
+	<description>This is a bit of a rare project. It is only meant to generate a jar file with the file services.xml in
+		the META-INF directory. Then the file copied manually in this location:
+		/factsheetweb/src/main/webapp/WEB-INF/services/
+		which will result in this:
+		/factsheetweb/src/main/webapp/WEB-INF/services/figis-services-def-3.0.0.jar
+		Note: Axis2 uses the aar extension for this kind of files, but it works with the jar extension as well.</description>
+	<scm>
+		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/trunk/factsheet-services-def</connection>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

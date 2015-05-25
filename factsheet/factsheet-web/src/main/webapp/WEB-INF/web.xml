@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="factsheet-web" version="2.5">
+	<display-name>factsheet-web</display-name>
+	<description>factsheet-web</description>
+	<distributable />
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		classpath:applicationContext-factsheet.xml
+		</param-value>
+	</context-param>
+
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Factsheet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-dispatcher.xml</param-value>
+		</init-param>
+	</servlet>
+
+	<!--
+     Dispatcher servlet mapping for the web user interface, - refering
+    to the "image" servlet above.
+	  -->
+	<servlet-mapping>
+		<servlet-name>Factsheet</servlet-name>
+		<url-pattern>/domain/*</url-pattern>
+	</servlet-mapping>
+
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

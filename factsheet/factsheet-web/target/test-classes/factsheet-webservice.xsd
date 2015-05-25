@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fiws="http://www.fao.org/fi/figis/devcon/webservice"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" targetNamespace="http://www.fao.org/fi/figis/devcon/webservice"
+	elementFormDefault="qualified">
+
+	<import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd" />
+
+
+	<complexType name="RowCountType">
+		<attribute name="itemCount" type="int"></attribute>
+	</complexType>
+
+	<complexType name="FactsheetListType">
+		<complexContent>
+			<extension base="fiws:RowCountType">
+				<sequence minOccurs="0" maxOccurs="1">
+					<element ref="fiws:FactsheetDiscriminator" minOccurs="0" maxOccurs="unbounded"></element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="DomainListType">
+		<complexContent>
+			<extension base="fiws:RowCountType">
+				<sequence minOccurs="0" maxOccurs="1">
+					<element ref="fiws:Domain" minOccurs="0" maxOccurs="20"></element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="LanguageListType">
+		<complexContent>
+			<extension base="fiws:RowCountType">
+				<sequence minOccurs="0" maxOccurs="1">
+					<element ref="fiws:Language" minOccurs="0" maxOccurs="5"></element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+
+	<complexType name="FactsheetType"></complexType>
+
+	<complexType name="FactsheetDiscriminatorType">
+		<attribute name="factsheet" type="int"></attribute>
+		<attribute name="domain" type="fiws:DomainType"></attribute>
+		<attribute name="lang" type="fiws:FactsheetLanguageType"></attribute>
+	</complexType>
+
+	<simpleType name="FactsheetLanguageType">
+		<restriction base="string">
+			<enumeration value="en"></enumeration>
+			<enumeration value="es"></enumeration>
+			<enumeration value="fr"></enumeration>
+			<enumeration value="ar"></enumeration>
+			<enumeration value="zh"></enumeration>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="DomainType">
+		<restriction base="string">
+			<enumeration value="resource"></enumeration>
+		</restriction>
+	</simpleType>
+
+	<element name="Domain" type="fiws:DomainType" />
+	<element name="DomainList" type="fiws:DomainListType" />
+	<element name="FactsheetList" type="fiws:FactsheetListType" />
+	<element name="FactsheetDiscriminator" type="fiws:FactsheetDiscriminatorType" />
+	<element name="Language" type="fiws:FactsheetLanguageType" />
+	<element name="LanguageList" type="fiws:LanguageListType" />
+
+
+</schema>

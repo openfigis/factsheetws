@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fiws:DomainList itemCount="2" xmlns:fiws="http://www.fao.org/fi/figis/devcon/webservice" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.fao.org/fi/figis/devcon/webservice factsheet-webservice.xsd ">
+	<fiws:Domain>fiets</fiws:Domain>
+	<fiws:Domain>porn</fiws:Domain>
+</fiws:DomainList>
