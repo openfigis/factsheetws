@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<fiws:StocksByFaoArea xmlns:fiws="http://www.fao.org/fi/figis/devcon/webservice" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.fao.org/fi/figis/devcon/webservice fisheryresources.xsd">
+	<fiws:Inclusion itemCount="1">
+		<fiws:AqRes>
+			<fiws:Owner>
+				<fiws:ForeignID Code="NAFO_SS" CodeSystem="acronym" />
+				<dc:Title xml:lang="en">Northwest Atlantic Fisheries Organization (NAFO)</dc:Title>
+				<dc:Title xml:lang="es">Organización de Pesquerías del Atlántico Noroeste (NAFO)</dc:Title>
+				<dc:Title xml:lang="fr">L'Atlantique du Nord-Ouest Organisation des pêches (OPANO)</dc:Title>
+			</fiws:Owner>
+			<fiws:FigisID Type="Object">10315</fiws:FigisID>
+			<fiws:FigisID Type="Observation">155383</fiws:FigisID>
+			<dc:Title>Skipjack tuna - Eastern Pacific</dc:Title>
+			<fiws:SpeciesList>
+				<fiws:SpeciesRef>
+					<fiws:ForeignID CodeSystem="fao3alpha" Code="cod" />
+				</fiws:SpeciesRef>
+			</fiws:SpeciesList>
+			<fiws:WaterAreaList>
+				<fiws:WaterAreaRef>
+					<fiws:ForeignID CodeSystem="fao_div" Code="21.3.O" />
+				</fiws:WaterAreaRef>
+			</fiws:WaterAreaList>
+			<dc:Identifier Type="URI">ftp://ftp.fao.org/docrep/fao/010/a1291e/a1291e.pdf</dc:Identifier>
+		</fiws:AqRes>
+	</fiws:Inclusion>
+	<fiws:Intersection itemCount="1">
+		<fiws:AqRes>
+			<fiws:Owner>
+				<fiws:ForeignID Code="NAFO_SS" CodeSystem="acronym" />
+				<dc:Title xml:lang="en">Northwest Atlantic Fisheries Organization (NAFO)</dc:Title>
+				<dc:Title xml:lang="es">Organización de Pesquerías del Atlántico Noroeste (NAFO)</dc:Title>
+				<dc:Title xml:lang="fr">L'Atlantique du Nord-Ouest Organisation des pêches (OPANO)</dc:Title>
+			</fiws:Owner>
+			<fiws:FigisID Type="Object">10315</fiws:FigisID>
+			<fiws:FigisID Type="Observation">155383</fiws:FigisID>
+			<dc:Title>Skipjack tuna - Eastern Pacific</dc:Title>
+			<fiws:SpeciesList>
+				<fiws:SpeciesRef>
+					<fiws:ForeignID CodeSystem="fao3alpha" Code="cod" />
+				</fiws:SpeciesRef>
+			</fiws:SpeciesList>
+			<fiws:WaterAreaList>
+				<fiws:WaterAreaRef>
+					<fiws:ForeignID CodeSystem="fao_div" Code="21.3.O" />
+				</fiws:WaterAreaRef>
+			</fiws:WaterAreaList>
+			<dc:Identifier Type="URI">ftp://ftp.fao.org/docrep/fao/010/a1291e/a1291e.pdf</dc:Identifier>
+		</fiws:AqRes>
+	</fiws:Intersection>
+</fiws:StocksByFaoArea>

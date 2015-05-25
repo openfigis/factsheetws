@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fi:FIGISDoc xmlns:fi="http://www.fao.org/fi/figis/devcon/" xmlns:ags="http://www.purl.org/agmes/1.1/"
+	xmlns:aida="http://www.idmlinitiative.org/resources/dtds/AIDA22.xsd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.fao.org/fi/figis/devcon/ http://www.fao.org/fi/figis/devcon/schema/3_6/aqres.xsd">
+	<fi:DataEntry>
+		<fi:Editor>FIRMS</fi:Editor>
+	</fi:DataEntry>
+	<fi:ObjectSource>
+		<fi:Owner>
+			<fi:CollectionRef>
+				<fi:FigisID MetaID="261000">3</fi:FigisID>
+				<fi:ForeignID Code="CECAF_SSR" CodeSystem="acronym" />
+				<fi:OrgRef Type="Organisation" Office="Decentralised" Role="Executing_agency" >
+					<fi:FigisID MetaID="104000">6426</fi:FigisID>
+					<fi:ForeignID Code="FAO" CodeSystem="acronym" />
+					<dc:Title xml:lang="en">Food and Agriculture Organization (FAO)</dc:Title>
+					<dc:Title xml:lang="fr">Food and Agriculture Organization (FAO)</dc:Title>
+					<dc:Title xml:lang="es">Food and Agriculture Organization (FAO)</dc:Title>
+					<fi:ContactEntry />
+				</fi:OrgRef>
+				<dc:Title xml:lang="en">CECAF Stock Status Reports</dc:Title>
+				<dc:Title xml:lang="fr">Rapports de l'état des stocks COPACE</dc:Title>
+			</fi:CollectionRef>
+		</fi:Owner>
+		<fi:CorporateCoverPage>
+			<fi:FigisID>3</fi:FigisID>
+			<dc:Title xml:lang="en">Status of stocks and resources</dc:Title>
+			<ags:CreatorCorporate xml:lang="en">FAO CECAF Scientific Committee (FAO CECAF-SC)
+			</ags:CreatorCorporate>
+			<fi:Series xml:lang="en">FIRMS Reports</fi:Series>
+		</fi:CorporateCoverPage>
+	</fi:ObjectSource>
+	<fi:AqRes>
+		<fi:AqResIdent Factsheet="true" RefObservation="false">
+			<fi:FigisID Type="Observation">891</fi:FigisID>
+			<fi:FigisID >10123</fi:FigisID>
+			<dc:Title>French title</dc:Title>
+			<fi:SpeciesList>
+				<fi:SpeciesRef>
+					<fi:FigisID MetaID="31005">3025</fi:FigisID>
+					<fi:ForeignID Code="Merluccius senegalensis" CodeSystem="scientific_name" />
+					<fi:ForeignID Code="HKM" CodeSystem="fao3alpha" />
+					<dc:Title xml:lang="en">Senegalese hake</dc:Title>
+					<dc:Title xml:lang="fr">Merlu du Sénégal</dc:Title>
+					<dc:Title xml:lang="es">Merluza del Senegal</dc:Title>
+				</fi:SpeciesRef>
+				<fi:SpeciesRef>
+					<fi:ForeignID Code="Merluccius polli" CodeSystem="scientific_name" />
+					<fi:ForeignID Code="HKB" CodeSystem="fao3alpha" />
+					<fi:FigisID MetaID="31005">2241</fi:FigisID>
+					<dc:Title xml:lang="en">Benguela hake</dc:Title>
+					<dc:Title xml:lang="fr">Merlu d'Afrique tropicale</dc:Title>
+					<dc:Title xml:lang="es">Merluza de Benguela</dc:Title>
+				</fi:SpeciesRef>
+			</fi:SpeciesList>
+			<fi:WaterAreaList>
+				<dc:Title>Zone nord de l'Atlantique Centre Est</dc:Title>
+				<fi:WaterAreaRef>
+					<fi:FigisID MetaID="22040">725</fi:FigisID>
+					<fi:ForeignID Code="34.1.3.2" CodeSystem="fao_sub_div" />
+					<dc:Title xml:lang="en">Atlantic, East central / 34.1.3.2</dc:Title>
+					<dc:Title xml:lang="fr">Atl EC / 34.1.3.2</dc:Title>
+					<dc:Title xml:lang="es">Atl EC / 34.1.3.2</dc:Title>
+					<fi:IntersectingAreas>
+						<fi:WaterAreaRef>
+							<fi:FigisID MetaID="22010">12</fi:FigisID>
+							<fi:ForeignID Code="34" CodeSystem="fao_major" />
+							<dc:Title xml:lang="en">Atlantic, Eastern Central</dc:Title>
+							<dc:Title xml:lang="fr">Atlantique, centre-est</dc:Title>
+							<dc:Title xml:lang="es">Atlántico, centro-oriental</dc:Title>
+						</fi:WaterAreaRef>
+						<fi:WaterAreaRef>
+							<fi:FigisID MetaID="21005">5019</fi:FigisID>
+							<fi:ForeignID Code="27" CodeSystem="lme" />
+							<dc:Title xml:lang="en">Canary Current</dc:Title>
+							<dc:Title xml:lang="fr">Canary Current</dc:Title>
+							<dc:Title xml:lang="es">Canary Current</dc:Title>
+						</fi:WaterAreaRef>
+					</fi:IntersectingAreas>
+				</fi:WaterAreaRef>
+				<fi:WaterAreaRef>
+					<fi:FigisID MetaID="22040">726</fi:FigisID>
+					<fi:ForeignID Code="34.3.1.1" CodeSystem="fao_sub_div" />
+					<dc:Title xml:lang="en">Atlantic, East central / 34.3.1.1</dc:Title>
+					<dc:Title xml:lang="fr">Atl EC / 34.3.1.1</dc:Title>
+					<dc:Title xml:lang="es">Atl EC / 34.3.1.1</dc:Title>
+					<fi:IntersectingAreas>
+						<fi:WaterAreaRef>
+							<fi:FigisID MetaID="22010">12</fi:FigisID>
+							<fi:ForeignID Code="34" CodeSystem="fao_major" />
+							<dc:Title xml:lang="en">Atlantic, Eastern Central</dc:Title>
+							<dc:Title xml:lang="fr">Atlantique, centre-est</dc:Title>
+							<dc:Title xml:lang="es">Atlántico, centro-oriental</dc:Title>
+						</fi:WaterAreaRef>
+						<fi:WaterAreaRef>
+							<fi:FigisID MetaID="21005">5019</fi:FigisID>
+							<fi:ForeignID Code="27" CodeSystem="lme" />
+							<dc:Title xml:lang="en">Canary Current</dc:Title>
+							<dc:Title xml:lang="fr">Canary Current</dc:Title>
+							<dc:Title xml:lang="es">Canary Current</dc:Title>
+						</fi:WaterAreaRef>
+					</fi:IntersectingAreas>
+				</fi:WaterAreaRef>
+				<fi:WaterAreaRef>
+					<fi:FigisID MetaID="22040">727</fi:FigisID>
+					<fi:ForeignID Code="34.3.1.2" CodeSystem="fao_sub_div" />
+					<dc:Title xml:lang="en">Atlantic, East central / 34.3.1.2</dc:Title>
+					<dc:Title xml:lang="fr">Atl EC / 34.3.1.2</dc:Title>
+					<dc:Title xml:lang="es">Atl EC / 34.3.1.2</dc:Title>
+					<fi:IntersectingAreas>
+						<fi:WaterAreaRef>
+							<fi:FigisID MetaID="22010">12</fi:FigisID>
+							<fi:ForeignID Code="34" CodeSystem="fao_major" />
+							<dc:Title xml:lang="en">Atlantic, Eastern Central</dc:Title>
+							<dc:Title xml:lang="fr">Atlantique, centre-est</dc:Title>
+							<dc:Title xml:lang="es">Atlántico, centro-oriental</dc:Title>
+						</fi:WaterAreaRef>
+						<fi:WaterAreaRef>
+							<fi:FigisID MetaID="21005">5019</fi:FigisID>
+							<fi:ForeignID Code="27" CodeSystem="lme" />
+							<dc:Title xml:lang="en">Canary Current</dc:Title>
+							<dc:Title xml:lang="fr">Canary Current</dc:Title>
+							<dc:Title xml:lang="es">Canary Current</dc:Title>
+						</fi:WaterAreaRef>
+					</fi:IntersectingAreas>
+				</fi:WaterAreaRef>
+			</fi:WaterAreaList>
+			<fi:ReferenceYear>2004</fi:ReferenceYear>
+			<fi:ReportingYear>2005</fi:ReportingYear>
+			<fi:AdditionalRefData>
+				<dcterms:Alternative xml:lang="fr">Merlu noir (Merluccius senegalensis et Merluccius polli) en
+					Mauritanie, Senegal, Gambie 20°46'-12°18''</dcterms:Alternative>
+			</fi:AdditionalRefData>
+		</fi:AqResIdent>
+		<fi:HabitatBio>
+			<fi:BottomType FreeValue="Soft bottom - clean sand" />
+			<fi:BottomType FreeValue="Soft bottom - muddy or muddy-sand" />
+			<fi:HorizontalDist Value="Neritic" />
+			<fi:HorizontalDist Value="Oceanic" />
+			<fi:VerticalDist FreeValue="Demersal" />
+		</fi:HabitatBio>
+		<fi:GeoDist>
+			<fi:JurisdictionalDist Value="Shared between nations" />
+		</fi:GeoDist>
+		<fi:WaterAreaOverview>
+			<fi:SpatialScale Value="Regional" />
+			<fi:WaterAreaRef>
+				<fi:FigisID MetaID="24023">3104</fi:FigisID>
+				<fi:ForeignID Code="MRT" CodeSystem="eez" />
+				<dc:Title xml:lang="en">Mauritania</dc:Title>
+				<dc:Title xml:lang="fr">Mauritania</dc:Title>
+				<dc:Title xml:lang="es">Mauritania</dc:Title>
+				<fi:IntersectingAreas>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="22010">12</fi:FigisID>
+						<fi:ForeignID Code="34" CodeSystem="fao_major" />
+						<dc:Title xml:lang="en">Atlantic, Eastern Central</dc:Title>
+						<dc:Title xml:lang="fr">Atlantique, centre-est</dc:Title>
+						<dc:Title xml:lang="es">Atlántico, centro-oriental</dc:Title>
+					</fi:WaterAreaRef>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="21005">5019</fi:FigisID>
+						<fi:ForeignID Code="27" CodeSystem="lme" />
+						<dc:Title xml:lang="en">Canary Current</dc:Title>
+						<dc:Title xml:lang="fr">Canary Current</dc:Title>
+						<dc:Title xml:lang="es">Canary Current</dc:Title>
+					</fi:WaterAreaRef>
+				</fi:IntersectingAreas>
+			</fi:WaterAreaRef>
+			<fi:WaterAreaRef>
+				<fi:FigisID MetaID="24023">3148</fi:FigisID>
+				<fi:ForeignID Code="SEN" CodeSystem="eez" />
+				<dc:Title xml:lang="en">Senegal</dc:Title>
+				<dc:Title xml:lang="fr">Senegal</dc:Title>
+				<dc:Title xml:lang="es">Senegal</dc:Title>
+				<fi:IntersectingAreas>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="22010">12</fi:FigisID>
+						<fi:ForeignID Code="34" CodeSystem="fao_major" />
+						<dc:Title xml:lang="en">Atlantic, Eastern Central</dc:Title>
+						<dc:Title xml:lang="fr">Atlantique, centre-est</dc:Title>
+						<dc:Title xml:lang="es">Atlántico, centro-oriental</dc:Title>
+					</fi:WaterAreaRef>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="21005">5019</fi:FigisID>
+						<fi:ForeignID Code="27" CodeSystem="lme" />
+						<dc:Title xml:lang="en">Canary Current</dc:Title>
+						<dc:Title xml:lang="fr">Canary Current</dc:Title>
+						<dc:Title xml:lang="es">Canary Current</dc:Title>
+					</fi:WaterAreaRef>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="21005">5020</fi:FigisID>
+						<fi:ForeignID Code="28" CodeSystem="lme" />
+						<dc:Title xml:lang="en">Guinea Current</dc:Title>
+						<dc:Title xml:lang="fr">Guinea Current</dc:Title>
+						<dc:Title xml:lang="es">Guinea Current</dc:Title>
+					</fi:WaterAreaRef>
+				</fi:IntersectingAreas>
+			</fi:WaterAreaRef>
+			<fi:WaterAreaRef>
+				<fi:FigisID MetaID="24023">3064</fi:FigisID>
+				<fi:ForeignID Code="GMB" CodeSystem="eez" />
+				<dc:Title xml:lang="en">Gambia</dc:Title>
+				<dc:Title xml:lang="fr">Gambia</dc:Title>
+				<dc:Title xml:lang="es">Gambia</dc:Title>
+				<fi:IntersectingAreas>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="22010">12</fi:FigisID>
+						<fi:ForeignID Code="34" CodeSystem="fao_major" />
+						<dc:Title xml:lang="en">Atlantic, Eastern Central</dc:Title>
+						<dc:Title xml:lang="fr">Atlantique, centre-est</dc:Title>
+						<dc:Title xml:lang="es">Atlántico, centro-oriental</dc:Title>
+					</fi:WaterAreaRef>
+					<fi:WaterAreaRef>
+						<fi:FigisID MetaID="21005">5019</fi:FigisID>
+						<fi:ForeignID Code="27" CodeSystem="lme" />
+						<dc:Title xml:lang="en">Canary Current</dc:Title>
+						<dc:Title xml:lang="fr">Canary Current</dc:Title>
+						<dc:Title xml:lang="es">Canary Current</dc:Title>
+					</fi:WaterAreaRef>
+				</fi:IntersectingAreas>
+			</fi:WaterAreaRef>
+		</fi:WaterAreaOverview>
+		<fi:AqResStruct BiologicalStock="false" />
+		<fi:Exploit>
+		</fi:Exploit>
+		<fi:AqResStateTrend>
+
+			<fi:ExploitState Value="Moderately exploited" />
+			<fi:Text><![CDATA[Moderately exploited in Senegal and Gambia.]]></fi:Text>
+		</fi:AqResStateTrend>
+		<fi:Bibliography>
+			<fi:BiblioEntry>
+				<dc:Title>Ressources Halieutiques : situation et niveau dexploitation</dc:Title>
+				<ags:CreatorCorporate>Institut National de Recherche Halieutique du maroc</ags:CreatorCorporate>
+				<dcterms:Created>2002</dcterms:Created>
+				<dc:Publisher>INRH/Ministère de la Pche Maritime du Maroc</dc:Publisher>
+			</fi:BiblioEntry>
+			<fi:BiblioEntry>
+				<dc:Title>Report of the FOURTH SESSION OF CECAF SCIENTIFIC SUB-COMMITTEE ACCRA, GHANA, 24-26 OCTOBER 2005</dc:Title>
+				<ags:CreatorCorporate>FAO</ags:CreatorCorporate>
+				<dcterms:Created>2006</dcterms:Created>
+				<fi:Series>FAO fisheries technical paper 457</fi:Series>
+				<dc:Publisher>FAO</dc:Publisher>
+			</fi:BiblioEntry>
+		</fi:Bibliography>
+	</fi:AqRes>
+</fi:FIGISDoc>

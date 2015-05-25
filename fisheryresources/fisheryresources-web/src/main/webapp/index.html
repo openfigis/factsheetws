@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  <title>Fishery Resources Webservice</title>
+  <meta content="Erik van Ingen" name="author">
+</head>
+<body>
+<br style="color: rgb(0, 153, 0);">
+<div style="color: rgb(0, 153, 0); width: 1124px; text-align: center;"><br>
+<br>
+<big><big><big><span style="font-family: Palatino Linotype;">Welcome to
+the &nbsp;<span style="font-weight: bold;">fisheryresources-</span></span><span
+ style="font-family: Palatino Linotype; font-weight: bold;">web
+</span><span style="font-family: Palatino Linotype;">webservice
+application<br>
+<br>
+<small><small>This
+is the a REST based webservice using <a
+ href="http://www.fao.org/fi/figis/devcon/schema/webservice/fisheryresources.xsd">this</a>
+xml schema. Go&nbsp;</small></small></span></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"></span></big></big></big><big><big><big><a
+ href="http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources"><small><small>here</small></small></a></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"><small><small>
+to for more
+documentation. </small></small><br>
+</span></big></big></big><br>
+<br>
+<table
+ style="text-align: left; margin-left: auto; margin-right: auto; width: 922px;"
+ border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="color: rgb(0, 153, 0); width: 366px;"><b>URL</b></td>
+      <td style="color: rgb(0, 153, 0); width: 149px;"><b>Resource</b></td>
+      <td style="color: rgb(0, 153, 0); width: 399px;"><b>Description</b></td>
+    </tr>
+    <tr>
+      <td style="width: 399px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 366px;"><a
+ href="stocksbyspecies/fao3alphacode/SKJ">stocksbyspecies/fao3alphacode/{fao3alphacode}</a></td>
+      <td style="color: rgb(0, 153, 0); width: 149px;">StocksBySpecies</td>
+      <td style="color: rgb(0, 153, 0); width: 399px;"><big
+ style="color: rgb(0, 153, 0);"><big><big><small><small>Service <span
+ style="font-style: italic;">FisheryResource</span>s
+with the operation&nbsp;<span style="font-style: italic;">StocksBySpecies.&nbsp;</span>It
+searches through all resource factsheets
+given&nbsp;a&nbsp;species(fao3alphacode) and returns&nbsp;a list of
+stocks.&nbsp;</small></small></big></big></big></td>
+    </tr>
+    <tr>
+      <td style="width: 399px;" colspan="3" rowspan="1"><span
+ style="text-decoration: underline;">&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;</span></td>
+    </tr>
+    <tr>
+      <td style="width: 366px;"><a href="stocksbyfaoarea/faoarea/21.3">stocksbyfaoarea/faoarea/{faoarea}</a></td>
+      <td style="color: rgb(0, 153, 0); width: 149px;">StocksByFaoArea</td>
+      <td style="color: rgb(0, 153, 0); width: 399px;"><big
+ style="color: rgb(0, 153, 0);"><big><big><small><small>Service <span
+ style="font-style: italic;">FisheryResource</span>s
+with the operation&nbsp;<span style="font-style: italic;">StocksByFaoArea.&nbsp;</span>It
+searches&nbsp;all stocks ocurring in the given FAO
+area (or sub-area, division, sub-division) or intersecting&nbsp;with
+it. Results are presented in the&nbsp;elements Inclusion and
+Intersection.</small></small></big></big></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+version 0.0.4<br>
+<big><big><big><span
+ style="font-family: Palatino Linotype; font-weight: bold;"></span></big></big></big><br>
+<br>
+<br>
+<big><big><big><span
+ style="font-family: Palatino Linotype; font-weight: bold;"><br>
+<br>
+</span></big></big></big><big><big><big><span
+ style="font-family: Palatino Linotype;"><br>
+</span></big></big></big><br>
+<br>
+<br>
+<br>
+<big><big><big><span style="font-family: Palatino Linotype;"><br>
+</span></big></big></big><br>
+<br>
+<br>
+</div>
+</body>
+</html>

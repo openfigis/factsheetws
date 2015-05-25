@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RetrieveStocksBySpeciesResponse xmlns:ns2="http://purl.org/dc/elements/1.1/" xmlns="http://www.fao.org/fi/figis/devcon/webservice">
+    <AqRes>
+        <FigisID Type="Object">10315</FigisID>
+        <FigisID Type="Observation">155383</FigisID>
+        <ns2:Title lang="EN">Atlantic Cod - Grand Bank</ns2:Title>
+        <SpeciesList>
+            <SpeciesRef>
+                <ForeignID Code="cod" CodeSystem="fao3alpha"/>
+            </SpeciesRef>
+        </SpeciesList>
+        <WaterAreaList>
+            <WaterAreaRef>
+                <ForeignID Code="21.3.O" CodeSystem="fao_div"/>
+            </WaterAreaRef>
+        </WaterAreaList>
+        <ns2:Identifier Type="URI">ftp://ftp.fao.org/docrep/fao/010/a1291e/a1291e.pdf</ns2:Identifier>
+    </AqRes>
+</RetrieveStocksBySpeciesResponse>

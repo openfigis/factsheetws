@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+
+
+
+
+	<!--
+		Location of persistent caches on disk. 003 is the version of the application (0.0.3). The cache is versioned to make
+		sure that the content will not conflict with previous versions.
+	-->
+	<diskStore path="java.io.tmpdir/fisheryresources-web-005" />
+
+	<!--  this one is not used -->
+	<defaultCache maxElementsInMemory="500" eternal="true" overflowToDisk="false" />
+
+
+
+
+	<cache name="FactsheetServicesCache" maxElementsInMemory="500" timeToLiveSeconds="604800" eternal="false"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+
+	<!-- 604800 is 1 week (60*60*24*7)  -->
+	<cache name="FisheryResourcesCache" maxElementsInMemory="500" timeToLiveSeconds="604800" eternal="false"
+		overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+
+	<!--
+		This cache persists to the disk. maxElementsOnDisk is not defined, defaults to 0 meaning an infinite number of objects
+		cached on disk.
+	-->
+	<cache name="FisheryResourcesCacheDisk" maxElementsInMemory="500" timeToLiveSeconds="604800" eternal="false"
+		overflowToDisk="true" diskPersistent="true" memoryStoreEvictionPolicy="LFU" />
+
+
+
+
+
+</ehcache>
+
+

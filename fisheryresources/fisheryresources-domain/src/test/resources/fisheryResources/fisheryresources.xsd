@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fiws="http://www.fao.org/fi/figis/devcon/webservice" xmlns:dc="http://purl.org/dc/elements/1.1/" targetNamespace="http://www.fao.org/fi/figis/devcon/webservice" elementFormDefault="qualified">
+	<import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+	<element name="StocksBySpecies" type="fiws:StocksByElementType"/>
+	<element name="StocksByFaoArea">
+		<complexType>
+			<sequence>
+				<element name="Inclusion" type="fiws:StocksByElementType" minOccurs="0"/>
+				<element name="Intersection" type="fiws:StocksByElementType" minOccurs="0"/>
+			</sequence>
+
+		</complexType>
+	</element>
+	<complexType name="StocksByElementType">
+		<sequence>
+			<element name="AqRes" type="fiws:AqResType" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="itemCount" type="int"></attribute>
+	</complexType>
+	<complexType name="AqResType" mixed="true">
+		<sequence>
+			<element name="Owner" type="fiws:OwnerType" minOccurs="1" maxOccurs="1" />
+			<element name="FigisID" type="fiws:FigisIDType" minOccurs="2" maxOccurs="2"/>
+			<element ref="dc:Title" maxOccurs="6"/>
+			<element name="SpeciesList" type="fiws:SpeciesListType" maxOccurs="2"/>
+			<element name="WaterAreaList" type="fiws:WaterAreaListType"/>
+			<element ref="dc:Identifier" maxOccurs="6"/>
+		</sequence>
+	</complexType>
+	<complexType name="OwnerType">
+
+		<annotation>
+			<documentation>
+				<Title>Owner</Title>
+				<Description>Owner contains contact a name and/or contact information of the owner/creator of an object , legal or
+					otherwise. It is oriented towards the identification of the Programme(S) that created the object(S) that are now
+					formatted in XML in the FIGISDoc. One must choose between a programme and a collection or series. If one chooses
+					programme, then the programme and related institution must be defined within the fi:OrgRef element. If one chooses
+					collection or series, the related institution must be defined within fi:OrgRef. fi:OrgRef - a container containing
+					the elements necessary to positively identify a programme, including the parent or identifying institution.
+					fi:Collection - a container that contains ownership information together with descriptive metadata for datasets or
+					other child collections. fi:Series - contains the name of a series. fi:OrgRef - a container containing the elements
+					necessary to positively identify an institution. fi:OrgRef - a container containing the elements necessary to
+					positively identify a project. fi:Contact - contains contact details for contacting the object owner, e.g. email,
+					address, etc.</Description>
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="ForeignID" type="fiws:ForeignIDType"/>
+
+			<element ref="dc:Title" maxOccurs="6"/>
+		</sequence>
+	</complexType>
+	<complexType name="FIGISReferenceType">
+		<sequence>
+			<element name="ForeignID" type="fiws:ForeignIDType"/>
+		</sequence>
+	</complexType>
+	<complexType name="SpeciesRefType">
+
+		<complexContent>
+			<extension base="fiws:FIGISReferenceType"/>
+		</complexContent>
+	</complexType>
+	<complexType name="WaterAreaRefType">
+		<complexContent>
+			<extension base="fiws:FIGISReferenceType"/>
+		</complexContent>
+	</complexType>
+
+	<complexType name="FigisIDType" mixed="true">
+		<annotation>
+			<documentation>
+				<Title>FIGIS identifier</Title>
+				<Description> FigisID is the FIGIS generated identification number of the domain element which contains fi:FIGISId.</Description>
+			</documentation>
+		</annotation>
+
+		<attribute name="Type" default="Object">
+			<simpleType>
+				<restriction base="token">
+					<enumeration value="Object"/>
+					<enumeration value="Observation"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="SpeciesListType" mixed="false">
+		<annotation>
+			<documentation>
+				<Title>Species list</Title>
+				<Description>contains a list of species references with optionally an ad hoc title for the corresponding group.</Description>
+			</documentation>
+		</annotation>
+		<choice maxOccurs="unbounded">
+
+			<element name="SpeciesRef" type="fiws:SpeciesRefType" minOccurs="0" maxOccurs="unbounded"/>
+		</choice>
+	</complexType>
+	<complexType name="WaterAreaListType" mixed="false">
+		<annotation>
+			<documentation>
+				<Title>Water Area List</Title>
+				<Description>contains a group of water area references with optionally an ad hoc title for the corresponding group.</Description>
+
+			</documentation>
+		</annotation>
+		<choice maxOccurs="unbounded">
+			<element name="WaterAreaRef" type="fiws:WaterAreaRefType" minOccurs="0" maxOccurs="unbounded"/>
+		</choice>
+	</complexType>
+	<complexType name="ForeignIDType" mixed="false">
+		<annotation>
+			<documentation>
+
+				<Title>Foreign identifier</Title>
+				<Description>Identifier in an external system of the FIGIS domain element which contains fi:ForeignID. Contains two
+					attributes: one is a reference to the foreign system (CodeSystem), one for the identifier in that system (Code).</Description>
+			</documentation>
+		</annotation>
+		<attribute name="CodeSystem" use="required">
+			<simpleType>
+				<restriction base="token">
+					<enumeration value="acronym"/>
+
+					<enumeration value="cdrom"/>
+					<enumeration value="eez"/>
+					<enumeration value="eims"/>
+					<enumeration value="eu_comp"/>
+					<enumeration value="fao_area"/>
+					<enumeration value="fao_div"/>
+					<enumeration value="fao_major"/>
+					<enumeration value="fao_sub_area"/>
+					<enumeration value="fao_sub_div"/>
+
+					<enumeration value="fao_sub_unit"/>
+					<enumeration value="fao_taxonomic"/>
+					<enumeration value="fao3alpha"/>
+					<enumeration value="gaul"/>
+					<enumeration value="gaul_level1"/>
+					<enumeration value="gaul_level2"/>
+					<enumeration value="gfcm_sub_area"/>
+					<enumeration value="iccat_smu"/>
+					<enumeration value="invid"/>
+
+					<enumeration value="iso2"/>
+					<enumeration value="iso3"/>
+					<enumeration value="iso3_country"/>
+					<enumeration value="isscaap"/>
+					<enumeration value="isscfg"/>
+					<enumeration value="isscfv"/>
+					<enumeration value="lme"/>
+					<enumeration value="rfb_comp"/>
+					<enumeration value="scientific_name"/>
+
+					<enumeration value="spc_iattc"/>
+					<enumeration value="pac_tuna_rep"/>
+					<enumeration value="un"/>
+					<enumeration value="un_continent"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="Code" type="string"/>
+	</complexType>
+
+
+
+</schema>

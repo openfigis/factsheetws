@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.fao.figis</groupId>
+	<artifactId>fisheryresources-integrationtest</artifactId>
+	<name>fisheryresources-integrationtest</name>
+	<version>0.0.5</version>
+	<description>Does a test on a live instance of fisheryresources-web</description>
+	<url>http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
+	<scm>
+		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/fisheryresources/trunk/fisheryresources-integrationtest</connection>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>openfigis</id>
+			<name>openfigis-releases</name>
+			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
+		</repository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>openfigis</id>
+			<name>openfigis</name>
+			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.fao.figis</groupId>
+			<artifactId>fisheryresources-web</artifactId>
+			<version>0.0.5</version>
+			<type>war</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.fao.figis</groupId>
+			<artifactId>fisheryresources-services</artifactId>
+			<version>0.0.5</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.fao.figis</groupId>
+			<artifactId>figis-commons-4test</artifactId>
+			<version>0.0.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

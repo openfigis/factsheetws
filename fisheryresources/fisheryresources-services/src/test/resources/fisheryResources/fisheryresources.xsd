@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fiws="http://www.fao.org/fi/figis/devcon/webservice" xmlns:dc="http://purl.org/dc/elements/1.1/" targetNamespace="http://www.fao.org/fi/figis/devcon/webservice" elementFormDefault="qualified">
+	<import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="dc.xsd"/>
+	<element name="RetrieveStocksBySpeciesResponse">
+		<annotation>
+			<documentation>Comment describing your root element</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="AqRes" type="fiws:AqResType" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="AqResType" mixed="true">
+		<sequence>
+			<element name="FigisID" type="fiws:FigisIDType" minOccurs="2" maxOccurs="2"/>
+			<element ref="dc:Title" maxOccurs="6"/>
+			<element name="SpeciesList" type="fiws:SpeciesListType" maxOccurs="2"/>
+			<element name="WaterAreaList" type="fiws:WaterAreaListType" maxOccurs="1"/>
+			<element ref="dc:Identifier" minOccurs="1" maxOccurs="6"/>
+		</sequence>
+	</complexType>
+	<complexType name="FIGISReferenceType">
+		<sequence>
+			<element name="ForeignID" type="fiws:ForeignIDType" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="SpeciesRefType">
+		<complexContent>
+			<extension base="fiws:FIGISReferenceType"/>
+		</complexContent>
+	</complexType>
+	<complexType name="WaterAreaRefType">
+		<complexContent>
+			<extension base="fiws:FIGISReferenceType"/>
+		</complexContent>
+	</complexType>
+	<complexType name="FigisIDType" mixed="true">
+		<annotation>
+			<documentation>
+				<Title>FIGIS identifier</Title>
+				<Description> FigisID is the FIGIS generated identification number of the domain element which contains fi:FIGISId.</Description>
+			</documentation>
+		</annotation>
+		<attribute name="Type" default="Object">
+			<simpleType>
+				<restriction base="token">
+					<enumeration value="Object"/>
+					<enumeration value="Observation"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+	<complexType name="SpeciesListType" mixed="false">
+		<annotation>
+			<documentation>
+				<Title>Species list</Title>
+				<Description>contains a list of species references with optionally an ad hoc title for the corresponding group.</Description>
+			</documentation>
+		</annotation>
+		<choice maxOccurs="unbounded">
+			<element name="SpeciesRef" type="fiws:SpeciesRefType" minOccurs="0" maxOccurs="unbounded"/>
+		</choice>
+	</complexType>
+	<complexType name="WaterAreaListType" mixed="false">
+		<annotation>
+			<documentation>
+				<Title>Water Area List</Title>
+				<Description>contains a group of water area references with optionally an ad hoc title for the corresponding group.</Description>
+			</documentation>
+		</annotation>
+		<choice maxOccurs="unbounded">
+			<element name="WaterAreaRef" type="fiws:WaterAreaRefType" minOccurs="0" maxOccurs="unbounded"/>
+		</choice>
+	</complexType>
+	<complexType name="ForeignIDType" mixed="false">
+		<annotation>
+			<documentation>
+				<Title>Foreign identifier</Title>
+				<Description>Identifier in an external system of the FIGIS domain element which contains fi:ForeignID. Contains two attributes: one is a reference to the foreign system (CodeSystem), one for the identifier in that system (Code).</Description>
+			</documentation>
+		</annotation>
+		<attribute name="CodeSystem" use="required">
+			<simpleType>
+				<restriction base="token">
+					<enumeration value="acronym"/>
+					<enumeration value="cdrom"/>
+					<enumeration value="cecaf_comp"/>
+					<enumeration value="ccbsp_comp"/>
+					<enumeration value="ccsbt_comp"/>
+					<enumeration value="collection_code"/>
+					<enumeration value="eez"/>
+					<enumeration value="eims"/>
+					<enumeration value="eu_comp"/>
+					<enumeration value="fao_area"/>
+					<enumeration value="fao_div"/>
+					<enumeration value="fao_major"/>
+					<enumeration value="fao_sub_area"/>
+					<enumeration value="fao_sub_div"/>
+					<enumeration value="fao_sub_unit"/>
+					<enumeration value="fao_taxonomic"/>
+					<enumeration value="fao3alpha"/>
+					<enumeration value="gaul"/>
+					<enumeration value="gaul_level1"/>
+					<enumeration value="gaul_level2"/>
+					<enumeration value="gfcm_comp"/>
+					<enumeration value="gfcm_sub_area"/>
+					<enumeration value="ccamlr_comp"/>
+					<enumeration value="iattc_comp"/>
+					<enumeration value="iccat_comp"/>
+					<enumeration value="iccat_smu"/>
+					<enumeration value="iccat_smu_alb"/>
+					<enumeration value="iccat_smu_bet"/>
+					<enumeration value="iccat_smu_bft"/>
+					<enumeration value="iccat_smu_bum"/>
+					<enumeration value="iccat_smu_sai"/>
+					<enumeration value="iccat_smu_skj"/>
+					<enumeration value="iccat_smu_smt"/>
+					<enumeration value="iccat_smu_swo"/>
+					<enumeration value="iccat_smu_whm"/>
+					<enumeration value="iccat_smu_yft"/>
+					<enumeration value="invid"/>
+					<enumeration value="iotc_comp"/>
+					<enumeration value="iphc_comp"/>
+					<enumeration value="iso2"/>
+					<enumeration value="iso3"/>
+					<enumeration value="iso3_country"/>
+					<enumeration value="isscaap"/>
+					<enumeration value="isscfg"/>
+					<enumeration value="isscfv"/>
+					<enumeration value="lme"/>
+					<enumeration value="nafo_comp"/>
+					<enumeration value="nasco_comp"/>
+					<enumeration value="neafc_comp"/>
+					<enumeration value="npafc_comp"/>
+					<enumeration value="rfb_comp"/>
+					<enumeration value="scientific_name"/>
+					<enumeration value="seafo_comp"/>
+					<enumeration value="siofa_comp"/>
+					<enumeration value="spc_iattc"/>
+					<enumeration value="tuna_pac_ew_rep"/>
+					<enumeration value="tuna_pac_maj_rep"/>
+					<enumeration value="tuna_pac_ns_rep"/>
+					<enumeration value="tuna_pac_rep"/>
+					<enumeration value="un"/>
+					<enumeration value="un_continent"/>
+					<enumeration value="wcpfc_comp"/>
+					<enumeration value="wecafc_comp"/>
+					<enumeration value="Acronym"/>
+					<enumeration value="CDROM"/>
+					<enumeration value="Collection_code"/>
+					<enumeration value="EIMS"/>
+					<enumeration value="FAO_taxonomic"/>
+					<enumeration value="FAO3Alpha"/>
+					<enumeration value="GAUL"/>
+					<enumeration value="GAUL_level1"/>
+					<enumeration value="GAUL_level2"/>
+					<enumeration value="InvID"/>
+					<enumeration value="ISO2"/>
+					<enumeration value="ISO3"/>
+					<enumeration value="ISO3_country"/>
+					<enumeration value="ISSCAAP"/>
+					<enumeration value="ISSCFG"/>
+					<enumeration value="ISSCFV"/>
+					<enumeration value="Scientific_name"/>
+					<enumeration value="UN"/>
+					<enumeration value="UN_continent"/>
+					<!-- all codesystem values should be in lowercase, for the time being we keep temporary also the upper case -->
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="Code" type="string"/>
+	</complexType>
+</schema>
