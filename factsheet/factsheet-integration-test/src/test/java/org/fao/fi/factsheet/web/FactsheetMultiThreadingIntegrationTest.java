@@ -9,8 +9,8 @@ import org.fao.fi.factsheetwebservice.domain.FactsheetList;
 import org.junit.Test;
 
 public class FactsheetMultiThreadingIntegrationTest {
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://figis02:8888/factsheet-web/",
-			"http://localhost:8080/factsheet-web/");
+	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest(
+			"http://ldvapp08.fao.org:9999/factsheet-web-0.0.4/", "http://localhost:8080/factsheet-web/");
 
 	String response;
 
@@ -33,7 +33,7 @@ public class FactsheetMultiThreadingIntegrationTest {
 		FactsheetList factsheetList2 = (FactsheetList) fut3.getObject();
 		assertEquals(19, domainList1.getRowCount());
 		assertTrue(factsheetList1.getRowCount() > 350);
-		assertTrue(factsheetList1.getRowCount() < 400);
+		assertTrue(factsheetList1.getRowCount() < 700);
 		assertEquals(factsheetList1.getRowCount(), factsheetList2.getRowCount());
 
 	}
