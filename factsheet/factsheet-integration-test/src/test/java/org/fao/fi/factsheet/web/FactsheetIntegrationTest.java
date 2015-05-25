@@ -2,7 +2,7 @@ package org.fao.fi.factsheet.web;
 
 import static org.junit.Assert.assertNotNull;
 
-import org.fao.fi.commons.integationtest.tools.RestWebserviceIntegrationTest;
+import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 import org.junit.Test;
 
 public class FactsheetIntegrationTest {

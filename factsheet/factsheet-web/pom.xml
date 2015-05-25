@@ -93,7 +93,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.test</artifactId>
+			<artifactId>spring-test</artifactId>
 			<version>${spring.framework.version}</version>
 			<type>pom</type>
 			<scope>test</scope>

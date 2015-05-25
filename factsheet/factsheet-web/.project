@@ -3,7 +3,6 @@
 	<name>factsheet-web</name>
 	<comment></comment>
 	<projects>
-		<project>figis-commons</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -3,7 +3,7 @@ package org.fao.fi.factsheet.web;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.fao.fi.commons.integationtest.tools.RestWebserviceIntegrationTest;
+import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 import org.fao.fi.factsheetwebservice.domain.DomainList;
 import org.fao.fi.factsheetwebservice.domain.FactsheetList;
 import org.junit.Test;

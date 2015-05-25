@@ -1,6 +1,6 @@
 package org.fao.fi.factsheet.web;
 
-import org.fao.fi.commons.integationtest.tools.RestWebserviceIntegrationTest;
+import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 
 public class FireUrlThread extends Thread {
 	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://figis02:8888/factsheet-web/",
