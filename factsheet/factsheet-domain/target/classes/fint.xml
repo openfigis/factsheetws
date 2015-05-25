@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<fint:FsSearchResult xmlns:fint="http://www.fao.org/fishery/factsheets/search/fint"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.fao.org/fishery/factsheets/search/fint fint.xsd ">
-	<fint:ResultItem />
-	<fint:ResultItem />
-</fint:FsSearchResult>
