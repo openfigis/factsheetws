@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import org.fao.fi.commons.JaxbValidationEventHandler;
-import org.fao.fi.factsheet.domain.jaxb.FIGISDoc;
+import org.fao.fi.figis.devcon.FIGISDoc;
 import org.springframework.stereotype.Component;
 
 import com.googlecode.ehcache.annotations.Cacheable;

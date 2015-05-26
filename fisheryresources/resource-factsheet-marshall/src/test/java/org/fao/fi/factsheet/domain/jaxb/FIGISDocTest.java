@@ -9,6 +9,7 @@ import javax.xml.bind.Unmarshaller;
 
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.fao.fi.commons.JaxbValidationEventHandler;
+import org.fao.fi.figis.devcon.FIGISDoc;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

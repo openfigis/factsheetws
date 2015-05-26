@@ -2,7 +2,7 @@ package org.fao.fi.factsheet.marshall;
 
 import static org.junit.Assert.assertNotNull;
 
-import org.fao.fi.factsheet.domain.jaxb.FIGISDoc;
+import org.fao.fi.figis.devcon.FIGISDoc;
 import org.junit.Test;
 
 public class FactsheetXmlMarshallTest {
