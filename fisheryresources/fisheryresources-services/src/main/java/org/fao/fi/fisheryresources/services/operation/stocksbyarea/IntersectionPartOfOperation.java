@@ -1,5 +1,6 @@
 package org.fao.fi.fisheryresources.services.operation.stocksbyarea;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.fao.fi.figis.devcon.IntersectingAreas;
@@ -24,11 +25,11 @@ public class IntersectionPartOfOperation extends RetrieveStocksByElementOperatio
 	}
 
 	@Override
-	protected void enrichWithWater(org.fao.fi.fisheryresources.domain.stocksby.AqRes aqRes, List<Object> list) {
+	protected void enrichWithWater(org.fao.fi.fisheryresources.domain.stocksby.AqRes aqRes, List<Serializable> list) {
 		for (Object object : list) {
 			if (object instanceof WaterAreaList) {
 				WaterAreaList waterAreaList = (WaterAreaList) object;
-				List<Object> titleOrWaterAreaRefList = waterAreaList.getTitlesAndWaterAreaReves();
+				List<Serializable> titleOrWaterAreaRefList = waterAreaList.getTitlesAndWaterAreaReves();
 				org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList waterAreaListNew = new org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList();
 
 				for (Object titleOrWaterAreaRef : titleOrWaterAreaRefList) {

@@ -14,6 +14,7 @@ import org.fao.fi.fisheryresources.domain.stocksby.Identifier;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksBySpecies;
 import org.fao.fi.fisheryresources.domain.stocksby.Type;
 import org.fao.fi.fisheryresources.services.vo.ThreeAlphaCode;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -28,6 +29,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	 */
 
 	@Test
+	@Ignore
 	public void testRetrieveStocksBySpeciesResponse1() {
 		ThreeAlphaCode threeAlphaCode = new ThreeAlphaCode();
 		threeAlphaCode.setValue("ALB");
@@ -45,6 +47,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	}
 
 	@Test
+	@Ignore
 	public void testRetrieveStocksBySpeciesResponse2() {
 		ThreeAlphaCode threeAlphaCode = new ThreeAlphaCode();
 		threeAlphaCode.setValue("XXX");
@@ -63,6 +66,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	 * 
 	 */
 	@Test
+	@Ignore
 	public void testRetrieveStocksBySpeciesResponseALB() {
 		ThreeAlphaCode threeAlphaCode = new ThreeAlphaCode();
 		threeAlphaCode.setValue("ALB");
@@ -86,6 +90,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	 * 
 	 */
 	@Test
+	@Ignore
 	public void testRetrieveStocksBySpeciesResponseSKJ() {
 		testDelegateFindReourceInSpeciesResponse("15", "SKJ", "http://firms.fao.org/firms/resource/15/en");
 	}

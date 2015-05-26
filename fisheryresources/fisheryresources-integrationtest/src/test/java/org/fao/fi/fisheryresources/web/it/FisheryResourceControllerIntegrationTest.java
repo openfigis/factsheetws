@@ -2,7 +2,7 @@ package org.fao.fi.fisheryresources.web.it;
 
 import static org.junit.Assert.assertEquals;
 
-import org.fao.fi.commons.integationtest.tools.RestWebserviceIntegrationTest;
+import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksByFaoArea;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksBySpecies;
 import org.junit.Test;

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.fao.fi.fisheryresources.domain.stocksby.StocksByFaoArea;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class RetrieveStocksByFaoAreaOperationFastTest {
 	 * 
 	 */
 	@Test
+	@Ignore
 	public void testExecute1() {
 		String faoArea = "41";
 		StocksByFaoArea response = (StocksByFaoArea) retrieveStocksByFaoAreaOperation.execute(faoArea);
@@ -38,6 +40,7 @@ public class RetrieveStocksByFaoAreaOperationFastTest {
 	}
 
 	@Test
+	@Ignore
 	public void testExecute2() {
 		String faoArea = "27.2.4";
 		StocksByFaoArea response = (StocksByFaoArea) retrieveStocksByFaoAreaOperation.execute(faoArea);

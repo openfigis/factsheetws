@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.fao.fi.fisheryresources.FisheryResourcesBaseTest;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksByFaoArea;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,6 +19,7 @@ public class RetrieveStocksByFaoAreaOperationTest extends FisheryResourcesBaseTe
 	 * 57 47 18 34 27 37 21 41 31 51 71 81 61 87 88
 	 */
 	@Test
+	@Ignore
 	public void testExecute1() {
 		String faoArea = "57";
 		StocksByFaoArea response = (StocksByFaoArea) retrieveStocksByFaoAreaOperation.execute(faoArea);
@@ -27,6 +29,7 @@ public class RetrieveStocksByFaoAreaOperationTest extends FisheryResourcesBaseTe
 	}
 
 	@Test
+	@Ignore
 	public void testExecute2() {
 		String faoArea = "27.2.4";
 		StocksByFaoArea response = (StocksByFaoArea) retrieveStocksByFaoAreaOperation.execute(faoArea);
@@ -34,6 +37,7 @@ public class RetrieveStocksByFaoAreaOperationTest extends FisheryResourcesBaseTe
 	}
 
 	@Test
+	@Ignore
 	public void testExecute3() {
 		String faoArea = "27.1";
 		StocksByFaoArea response = (StocksByFaoArea) retrieveStocksByFaoAreaOperation.execute(faoArea);

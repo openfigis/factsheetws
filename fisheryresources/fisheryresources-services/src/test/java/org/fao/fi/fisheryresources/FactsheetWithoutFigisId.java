@@ -1,5 +1,6 @@
 package org.fao.fi.fisheryresources;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -14,6 +15,7 @@ import org.fao.fi.logical.domain.RetrieveFactsheetPerDomainListRequest;
 import org.fao.fi.services.factsheet.FactsheetService;
 import org.fao.fi.services.factsheet.logic.FactsheetUrlComposer;
 import org.fao.fi.services.factsheet.logic.FactsheetUrlComposerImpl;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,6 +24,7 @@ public class FactsheetWithoutFigisId extends FisheryResourcesBaseTest {
 	FactsheetService factsheetService;
 
 	@Test
+	@Ignore
 	public void calculateNumberOfResourceFactsheetWithoutFigisId() {
 		RetrieveFactsheetPerDomainListRequest request = new RetrieveFactsheetPerDomainListRequest();
 		request.setDomain("resource");
@@ -34,7 +37,7 @@ public class FactsheetWithoutFigisId extends FisheryResourcesBaseTest {
 			String url = c.composeFromDomainAndFactsheet(factsheetDiscriminator);
 			FactsheetXmlMarshall m = new FactsheetXmlMarshall();
 			FIGISDoc doc = m.unmarshal(url);
-			List<Object> olist = doc.getAqRes().getAqResIdent().getFigisIDsAndTitlesAndReferenceYears();
+			List<Serializable> olist = doc.getAqRes().getAqResIdent().getFigisIDsAndTitlesAndReferenceYears();
 			FigisID id = null;
 			for (Object object : olist) {
 				if (object instanceof FigisID) {
