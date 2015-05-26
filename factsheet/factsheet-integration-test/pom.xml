@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>factsheet-integration-test</artifactId>
 
-	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
+	<url>http://figisapps.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
 
 	<properties>
 		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>

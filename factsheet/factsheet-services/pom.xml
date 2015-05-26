@@ -7,7 +7,7 @@
 		<version>0.0.6</version>
 	</parent>
 	<artifactId>factsheet-services</artifactId>
-	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
+	<url>http://figisapps.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
 	<build>
 		<plugins>
 			<plugin>
