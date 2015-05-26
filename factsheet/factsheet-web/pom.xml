@@ -4,15 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.fao.figis</groupId>
 	<artifactId>factsheet-web</artifactId>
-	<name>factsheet-web</name>
 	<version>0.0.7</version>
-	<description></description>
 	<packaging>war</packaging>
-	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
 	<properties>
 		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
 	</properties>
 	<build>
+		<finalName>factsheet-web</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
