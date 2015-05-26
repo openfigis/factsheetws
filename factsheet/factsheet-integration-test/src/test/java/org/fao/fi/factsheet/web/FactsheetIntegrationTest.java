@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class FactsheetIntegrationTest {
 
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://figis02:8888/factsheet-web/",
+	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://hqldvfigis2:9999/factsheet-web/",
 			"http://localhost:8080/factsheet-web/");
 
 	String response;

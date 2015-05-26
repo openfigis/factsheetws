@@ -3,7 +3,7 @@ package org.fao.fi.factsheet.web;
 import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 
 public class FireUrlThread extends Thread {
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://figis02:8888/factsheet-web/",
+	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://hqldvfigis2:9999/factsheet-web/",
 			"http://localhost:8080/factsheet-web/");
 
 	private String restUrl;
