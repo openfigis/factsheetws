@@ -5,28 +5,12 @@
 	<groupId>org.fao.figis</groupId>
 	<artifactId>factsheet-web</artifactId>
 	<name>factsheet-web</name>
-	<version>0.0.5</version>
+	<version>0.0.7</version>
 	<description></description>
 	<packaging>war</packaging>
 	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
-	<ciManagement>
-		<system>Continuum</system>
-		<url>http://figis02:7000/continuum/projectGroupSummary.action?projectGroupId=6</url>
-	</ciManagement>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/factsheet/trunk/factsheet-web
-		</connection>
-		<url>http://openfigis.svn.sourceforge.net/viewvc/openfigis/factsheet/trunk/factsheet-web</url>
-	</scm>
-	<distributionManagement>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis-releases</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</distributionManagement>
 	<properties>
-		<spring.framework.version>3.0.3.RELEASE</spring.framework.version>
+		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
 	</properties>
 	<build>
 		<plugins>
@@ -37,22 +21,13 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>tomcat-maven-plugin</artifactId>
-				<configuration>
-					<server>tomcat</server>
-					<update>true</update>
-					<url>http://figis02:8888/manager/html</url>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-impl</artifactId>
-			<version>2.2</version>
+			<version>2.2.11</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
@@ -73,7 +48,7 @@
 		<dependency>
 			<groupId>org.fao.figis</groupId>
 			<artifactId>factsheet-services</artifactId>
-			<version>0.0.5</version>
+			<version>0.0.7</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>

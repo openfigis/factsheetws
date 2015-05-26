@@ -4,25 +4,10 @@
 	<groupId>org.fao.figis</groupId>
 	<artifactId>factsheet-services</artifactId>
 	<name>factsheet-services</name>
-	<version>0.0.5</version>
+	<version>0.0.7</version>
 	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
-	<ciManagement>
-		<system>Continuum</system>
-		<url>http://figis02:7000/continuum/projectGroupSummary.action?projectGroupId=6</url>
-	</ciManagement>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/factsheet/trunk/factsheet-services</connection>
-		<url>https://openfigis.svn.sourceforge.net/svnroot/openfigis/factsheet/trunk/factsheet-services</url>
-	</scm>
-		<distributionManagement>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis-releases</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</distributionManagement>
 	<properties>
-		<spring.version>3.0.3.RELEASE</spring.version>
+		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
 	</properties>
 	<build>
 		<plugins>
@@ -55,30 +40,30 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.core</artifactId>
-			<version>${spring.version}</version>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.framework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.context</artifactId>
-			<version>${spring.version}</version>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.framework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.aspects</artifactId>
-			<version>${spring.version}</version>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.framework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring.framework.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.test</artifactId>
-			<version>${spring.version}</version>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.framework.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
