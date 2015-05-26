@@ -2,9 +2,9 @@ package org.fao.fi.fisheryresources.services.operation.stocksbyarea;
 
 import java.util.List;
 
-import org.fao.fi.factsheet.domain.jaxb.IntersectingAreas;
-import org.fao.fi.factsheet.domain.jaxb.WaterAreaList;
-import org.fao.fi.factsheet.domain.jaxb.WaterAreaRef;
+import org.fao.fi.figis.devcon.IntersectingAreas;
+import org.fao.fi.figis.devcon.WaterAreaList;
+import org.fao.fi.figis.devcon.WaterAreaRef;
 import org.fao.fi.fisheryresources.domain.stocksby.Intersection;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksByElement;
 import org.fao.fi.fisheryresources.services.operation.stocksbyelement.CodeAdditionDecission;
@@ -28,7 +28,7 @@ public class IntersectionPartOfOperation extends RetrieveStocksByElementOperatio
 		for (Object object : list) {
 			if (object instanceof WaterAreaList) {
 				WaterAreaList waterAreaList = (WaterAreaList) object;
-				List<Object> titleOrWaterAreaRefList = waterAreaList.getTitleOrWaterAreaRef();
+				List<Object> titleOrWaterAreaRefList = waterAreaList.getTitlesAndWaterAreaReves();
 				org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList waterAreaListNew = new org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList();
 
 				for (Object titleOrWaterAreaRef : titleOrWaterAreaRefList) {
@@ -36,7 +36,7 @@ public class IntersectionPartOfOperation extends RetrieveStocksByElementOperatio
 						WaterAreaRef waterAreaRef = (WaterAreaRef) titleOrWaterAreaRef;
 						IntersectingAreas ias = waterAreaRef.getIntersectingAreas();
 						if (ias != null) {
-							List<WaterAreaRef> intersectingWaterAreaRefs = ias.getWaterAreaRef();
+							List<WaterAreaRef> intersectingWaterAreaRefs = ias.getWaterAreaReves();
 							for (WaterAreaRef intersectingWaterAreaRef : intersectingWaterAreaRefs) {
 								addWaterAreaRef2WaterAreaList(intersectingWaterAreaRef, waterAreaListNew);
 							}

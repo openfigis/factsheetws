@@ -1,6 +1,7 @@
 package org.fao.fi.fisheryresources.util;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 

@@ -4,26 +4,26 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.fao.fi.factsheet.domain.jaxb.FIGISDoc;
-import org.fao.fi.factsheet.domain.jaxb.FigisID;
-import org.fao.fi.factsheet.domain.jaxb.ForeignID;
-import org.fao.fi.factsheet.domain.jaxb.OrgRef;
-import org.fao.fi.factsheet.domain.jaxb.Owner;
-import org.fao.fi.factsheet.domain.jaxb.SpeciesList;
-import org.fao.fi.factsheet.domain.jaxb.SpeciesRef;
-import org.fao.fi.factsheet.domain.jaxb.Title;
-import org.fao.fi.factsheet.domain.jaxb.WaterAreaList;
-import org.fao.fi.factsheet.domain.jaxb.WaterAreaRef;
 import org.fao.fi.factsheet.marshall.FactsheetXmlMarshall;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
+import org.fao.fi.figis.devcon.FIGISDoc;
+import org.fao.fi.figis.devcon.FigisID;
+import org.fao.fi.figis.devcon.ForeignID;
+import org.fao.fi.figis.devcon.OrgRef;
+import org.fao.fi.figis.devcon.Owner;
+import org.fao.fi.figis.devcon.SpeciesList;
+import org.fao.fi.figis.devcon.SpeciesRef;
+import org.fao.fi.figis.devcon.WaterAreaList;
+import org.fao.fi.figis.devcon.WaterAreaRef;
 import org.fao.fi.fisheryresources.domain.stocksby.AqRes;
 import org.fao.fi.fisheryresources.domain.stocksby.Identifier;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksByElement;
 import org.fao.fi.fisheryresources.domain.stocksby.Type;
 import org.fao.fi.services.factsheet.logic.FactsheetUrlComposer;
 import org.fao.fi.services.factsheet.logic.FactsheetUrlComposerImpl;
+import org.purl.dc.elements._1.Title;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class RetrieveStocksByElementOperation {
@@ -112,7 +112,7 @@ public abstract class RetrieveStocksByElementOperation {
 				List<org.fao.fi.fisheryresources.domain.stocksby.FigisID> figisIdLIst = aqRes.getFigisIdList();
 				for (org.fao.fi.fisheryresources.domain.stocksby.FigisID figisID : figisIdLIst) {
 					if (figisID.getType().equals(Type.Object)) {
-						List<Object> list = figisDoc.getAqRes().getAqResIdent().getFigisIDOrTitleOrSpeciesList();
+						List<Object> list = figisDoc.getAqRes().getAqResIdent().getFigisIDsAndTitlesAndReferenceYears();
 						for (Object object : list) {
 							if (object instanceof FigisID) {
 								FigisID figisIDFactsheet = (FigisID) object;
@@ -129,7 +129,7 @@ public abstract class RetrieveStocksByElementOperation {
 	}
 
 	private void addUrlAndTitle2ThisAqRes(String url, FIGISDoc figisDoc, AqRes aqRes) {
-		List<Object> list = figisDoc.getAqRes().getAqResIdent().getFigisIDOrTitleOrSpeciesList();
+		List<Object> list = figisDoc.getAqRes().getAqResIdent().getFigisIDsAndTitlesAndReferenceYears();
 		for (Object object : list) {
 			if (object instanceof Title) {
 				Title title = (Title) object;
@@ -151,7 +151,7 @@ public abstract class RetrieveStocksByElementOperation {
 
 	private void add2response(StocksByElement response, FIGISDoc figisDoc, String url) {
 		org.fao.fi.fisheryresources.domain.stocksby.AqRes aqRes = new org.fao.fi.fisheryresources.domain.stocksby.AqRes();
-		List<Object> list = figisDoc.getAqRes().getAqResIdent().getFigisIDOrTitleOrSpeciesList();
+		List<Object> list = figisDoc.getAqRes().getAqResIdent().getFigisIDsAndTitlesAndReferenceYears();
 		enrichWithSpecies(aqRes, list);
 		enrichWithWater(aqRes, list);
 		enrichWithTitleAndId(aqRes, list);
@@ -177,8 +177,8 @@ public abstract class RetrieveStocksByElementOperation {
 	private void enrichWithOwner(AqRes aqRes, Owner owner) {
 		org.fao.fi.fisheryresources.domain.stocksby.Owner newOwner = new org.fao.fi.fisheryresources.domain.stocksby.Owner();
 		org.fao.fi.fisheryresources.domain.stocksby.ForeignID newForeignID = new org.fao.fi.fisheryresources.domain.stocksby.ForeignID();
-		OrgRef orgRef = owner.getCollectionRef().getOrgRef().get(0);
-		List<Object> list = orgRef.getFigisIDOrForeignID();
+		OrgRef orgRef = owner.getCollectionRef().getOrgReves().get(0);
+		List<Object> list = orgRef.getForeignIDsAndFigisIDsAndTitles();
 		for (Object figisIDOrForeignID : list) {
 			if (figisIDOrForeignID instanceof ForeignID) {
 				ForeignID foreignIDFound = (ForeignID) figisIDOrForeignID;
@@ -188,12 +188,14 @@ public abstract class RetrieveStocksByElementOperation {
 				}
 			}
 		}
-		List<Title> titleList = orgRef.getTitle();
-		for (Title title : titleList) {
-			org.fao.fi.fisheryresources.domain.stocksby.Title titleNew = new org.fao.fi.fisheryresources.domain.stocksby.Title();
-			titleNew.setContent(title.getContent());
-			titleNew.setLang(title.getLang());
-			newOwner.addTitle(titleNew);
+		List<Object> titleList = orgRef.getForeignIDsAndFigisIDsAndTitles();
+		for (Object title : titleList) {
+			if (title instanceof Title) {
+				org.fao.fi.fisheryresources.domain.stocksby.Title titleNew = new org.fao.fi.fisheryresources.domain.stocksby.Title();
+				titleNew.setContent(((Title) title).getContent());
+				titleNew.setLang(((Title) title).getLang());
+				newOwner.addTitle(titleNew);
+			}
 		}
 		newOwner.setForeignID(newForeignID);
 		aqRes.setOwner(newOwner);
@@ -226,7 +228,7 @@ public abstract class RetrieveStocksByElementOperation {
 			if (object instanceof SpeciesList) {
 				SpeciesList speciesList = (SpeciesList) object;
 				org.fao.fi.fisheryresources.domain.stocksby.SpeciesList speciesListNew = new org.fao.fi.fisheryresources.domain.stocksby.SpeciesList();
-				List<Object> titleOrSpeciesRefList = speciesList.getTitleOrSpeciesRef();
+				List<Object> titleOrSpeciesRefList = speciesList.getTitlesAndSpeciesReves();
 				for (Object titleOrSpeciesRef : titleOrSpeciesRefList) {
 					if (titleOrSpeciesRef instanceof SpeciesRef) {
 						SpeciesRef speciesRef = (SpeciesRef) titleOrSpeciesRef;
@@ -242,13 +244,13 @@ public abstract class RetrieveStocksByElementOperation {
 		for (Object object : list) {
 			if (object instanceof WaterAreaList) {
 				WaterAreaList waterAreaList = (WaterAreaList) object;
-				List<Object> titleOrWaterAreaRefList = waterAreaList.getTitleOrWaterAreaRef();
+				List<Object> titleOrWaterAreaRefList = waterAreaList.getTitlesAndWaterAreaReves();
 				org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList waterAreaListNew = new org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList();
 
 				for (Object titleOrWaterAreaRef : titleOrWaterAreaRefList) {
 					if (titleOrWaterAreaRef instanceof WaterAreaRef) {
 						WaterAreaRef waterAreaRef = (WaterAreaRef) titleOrWaterAreaRef;
-						List<Object> figisIDOrForeignIDList = waterAreaRef.getFigisIDOrForeignID();
+						List<Object> figisIDOrForeignIDList = waterAreaRef.getFigisIDsAndForeignIDs();
 						for (Object figisIDOrForeignID : figisIDOrForeignIDList) {
 							if (figisIDOrForeignID instanceof ForeignID) {
 								addWaterAreaRef2WaterAreaList(waterAreaRef, waterAreaListNew);
@@ -266,7 +268,7 @@ public abstract class RetrieveStocksByElementOperation {
 	protected final void addWaterAreaRef2WaterAreaList(WaterAreaRef waterAreaRef,
 			org.fao.fi.fisheryresources.domain.stocksby.WaterAreaList waterAreaListNew) {
 		org.fao.fi.fisheryresources.domain.stocksby.WaterAreaRef waterAreaRefNew = new org.fao.fi.fisheryresources.domain.stocksby.WaterAreaRef();
-		waterAreaRefNew.setForeignID(foreinID2New(waterAreaRef.getFigisIDOrForeignID()));
+		waterAreaRefNew.setForeignID(foreinID2New(waterAreaRef.getFigisIDsAndForeignIDs()));
 		waterAreaListNew.getWaterAreaRefList().add(waterAreaRefNew);
 
 	}
@@ -274,7 +276,7 @@ public abstract class RetrieveStocksByElementOperation {
 	private void addSpeciesRef2SpeciesList(SpeciesRef speciesRef,
 			org.fao.fi.fisheryresources.domain.stocksby.SpeciesList speciesListNew) {
 		org.fao.fi.fisheryresources.domain.stocksby.SpeciesRef speciesRefNew = new org.fao.fi.fisheryresources.domain.stocksby.SpeciesRef();
-		speciesRefNew.setForeignID(foreinID2New(speciesRef.getFigisIDOrForeignID()));
+		speciesRefNew.setForeignID(foreinID2New(speciesRef.getFigisIDsAndForeignIDsAndTitles()));
 		speciesListNew.getSpeciesRefList().add(speciesRefNew);
 	}
 

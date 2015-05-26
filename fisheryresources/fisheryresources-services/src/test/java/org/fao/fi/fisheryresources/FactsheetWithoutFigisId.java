@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.fao.fi.factsheet.domain.jaxb.FIGISDoc;
-import org.fao.fi.factsheet.domain.jaxb.FigisID;
 import org.fao.fi.factsheet.marshall.FactsheetXmlMarshall;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
+import org.fao.fi.figis.devcon.FIGISDoc;
+import org.fao.fi.figis.devcon.FigisID;
 import org.fao.fi.logical.domain.RetrieveFactsheetListResponse;
 import org.fao.fi.logical.domain.RetrieveFactsheetPerDomainListRequest;
 import org.fao.fi.services.factsheet.FactsheetService;
@@ -34,7 +34,7 @@ public class FactsheetWithoutFigisId extends FisheryResourcesBaseTest {
 			String url = c.composeFromDomainAndFactsheet(factsheetDiscriminator);
 			FactsheetXmlMarshall m = new FactsheetXmlMarshall();
 			FIGISDoc doc = m.unmarshal(url);
-			List<Object> olist = doc.getAqRes().getAqResIdent().getFigisIDOrTitleOrSpeciesList();
+			List<Object> olist = doc.getAqRes().getAqResIdent().getFigisIDsAndTitlesAndReferenceYears();
 			FigisID id = null;
 			for (Object object : olist) {
 				if (object instanceof FigisID) {
