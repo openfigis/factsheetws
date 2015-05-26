@@ -7,9 +7,8 @@ import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
 import org.springframework.stereotype.Component;
 
 /**
- * The relation between element and resources within FIGIS is only reflected in
- * the factsheets. This class reads all the factsheets and holds a list of all
- * the relations.
+ * The relation between element and resources within FIGIS is only reflected in the factsheets. This class reads all the
+ * factsheets and holds a list of all the relations.
  * 
  * 
  * @author Erik van Ingen

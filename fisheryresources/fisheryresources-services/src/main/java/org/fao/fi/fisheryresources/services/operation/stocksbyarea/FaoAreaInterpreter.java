@@ -7,8 +7,7 @@ public class FaoAreaInterpreter {
 	public FaoArea civiliseRawCode(String rawFaoAreaCode) {
 
 		/**
-		 * ^ means at the beginning of the string + for this number of loops &
-		 * until the end.
+		 * ^ means at the beginning of the string + for this number of loops & until the end.
 		 */
 		if (!rawFaoAreaCode.matches("^[a-zA-Z0-9.]+$")) {
 			throw new FigisException("rawFaoAreaCode does not comply with  ^[a-zA-Z0-9.]+$ " + rawFaoAreaCode);

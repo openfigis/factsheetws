@@ -9,8 +9,8 @@ import org.junit.Test;
 
 public class FisheryResourceControllerIntegrationTest {
 
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest(
-			"http://figis02:8888/fisheryresources-web/", "http://localhost:8080/fisheryresources-web/");
+	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://figis02:8888/fisheryresources-web/",
+			"http://localhost:8080/fisheryresources-web/");
 
 	/**
 	 * Can only run with a running server.
@@ -19,8 +19,8 @@ public class FisheryResourceControllerIntegrationTest {
 	 */
 	@Test
 	public void testStocksbyspecies3AlphaCode() throws Exception {
-		StocksBySpecies response = (StocksBySpecies) test.unMarshall(
-				"stocksbyspecies/fao3alphacode/ALB", StocksBySpecies.class);
+		StocksBySpecies response = (StocksBySpecies) test.unMarshall("stocksbyspecies/fao3alphacode/ALB",
+				StocksBySpecies.class);
 		assertEquals(9, response.getAqResList().size());
 	}
 

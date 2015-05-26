@@ -58,8 +58,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	/**
 	 * Bug reported by Aureliano
 	 * 
-	 * This one has more species lists
-	 * http://firms.fao.org/firms/xml/resource/16001/en
+	 * This one has more species lists http://firms.fao.org/firms/xml/resource/16001/en
 	 * 
 	 * 
 	 */
@@ -95,8 +94,8 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	 * 
 	 * Resource 10123 has HKM and HKB. So HKM should refer to 10123
 	 * 
-	 * At this moment 10123 has only the french one published. So it should find
-	 * the french factsheet: http://firms.fao.org/firms/xml/resource/10123/fr
+	 * At this moment 10123 has only the french one published. So it should find the french factsheet:
+	 * http://firms.fao.org/firms/xml/resource/10123/fr
 	 * 
 	 * 
 	 */
@@ -138,8 +137,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 	}
 
 	/**
-	 * french resource factsheets 10113 10114 10115 10119 10120 10121 10123
-	 * 10131 10132 10133 10135 10145 10148 10372
+	 * french resource factsheets 10113 10114 10115 10119 10120 10121 10123 10131 10132 10133 10135 10145 10148 10372
 	 * 
 	 * 
 	 */

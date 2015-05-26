@@ -14,7 +14,7 @@ public class Title {
 
 	@XmlValue
 	private String content;
-	@XmlAttribute(   namespace = "http://www.w3.org/XML/1998/namespace")
+	@XmlAttribute(namespace = "http://www.w3.org/XML/1998/namespace")
 	private String lang;
 
 	public final String getContent() {

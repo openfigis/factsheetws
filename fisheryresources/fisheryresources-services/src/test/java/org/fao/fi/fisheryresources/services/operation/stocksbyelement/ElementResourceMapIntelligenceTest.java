@@ -26,11 +26,10 @@ public class ElementResourceMapIntelligenceTest extends FisheryResourcesBaseTest
 	CodeAdditionDecission cad = new SpeciesDecision();
 
 	/**
-	 * 27.14.b 27.5.a 27.3.d.27 27.3.d.26 27.3.d.25 27.9.a 27.3.d.24 27.9.b
-	 * 27.3.a 27.3.d.29 27.3.d.28 27.6 27.2.a 27.5 27.2.b 27.12 27.14 27.1
-	 * 27.7.a 27.7.b 27.3.b.23 27.7.c 27.7.d 27.7.e 27.7.f 27.7.g 27.8.c 27.7.h
-	 * 27.8.d 27.5.b.1 27.8.e 27.7.j 27.3.c.22 27.7.k 27 27.8.a 27.5.b.2 27.8.b
-	 * 27.3.d.31 27.3.d.32 27.6.b 27.6.a 27.3.d.30 27.4.c 27.4.b 27.14.a 27.4.a
+	 * 27.14.b 27.5.a 27.3.d.27 27.3.d.26 27.3.d.25 27.9.a 27.3.d.24 27.9.b 27.3.a 27.3.d.29 27.3.d.28 27.6 27.2.a 27.5
+	 * 27.2.b 27.12 27.14 27.1 27.7.a 27.7.b 27.3.b.23 27.7.c 27.7.d 27.7.e 27.7.f 27.7.g 27.8.c 27.7.h 27.8.d 27.5.b.1
+	 * 27.8.e 27.7.j 27.3.c.22 27.7.k 27 27.8.a 27.5.b.2 27.8.b 27.3.d.31 27.3.d.32 27.6.b 27.6.a 27.3.d.30 27.4.c
+	 * 27.4.b 27.14.a 27.4.a
 	 */
 
 	// @Test
@@ -53,8 +52,7 @@ public class ElementResourceMapIntelligenceTest extends FisheryResourcesBaseTest
 	}
 
 	/**
-	 * should have resources 10112 and 10213
-	 * http://firms.fao.org/firms/xml/resource/10213/en
+	 * should have resources 10112 and 10213 http://firms.fao.org/firms/xml/resource/10213/en
 	 * http://firms.fao.org/firms/xml/resource/10112/en
 	 */
 	// @Test

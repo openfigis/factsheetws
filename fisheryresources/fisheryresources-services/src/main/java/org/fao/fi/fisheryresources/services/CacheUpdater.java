@@ -17,11 +17,9 @@ import org.springframework.util.StopWatch;
  * This beautiful class is a bit of a hack. It works only for
  * fisheryResourcesService.retrieveStocksBySpeciesResponse(threeAlphaCode)
  * 
- * It takes care of firing the service with a max of 5007 times of parameter
- * objects which have been used lately.
+ * It takes care of firing the service with a max of 5007 times of parameter objects which have been used lately.
  * 
- * A more advanced method for this is proposed in
- * http://groups.google.com/group/
+ * A more advanced method for this is proposed in http://groups.google.com/group/
  * ehcache-spring-annotations/browse_thread/thread/8e8459e1a18f1998
  * 
  * @author Erik van Ingen
@@ -33,8 +31,7 @@ import org.springframework.util.StopWatch;
 public class CacheUpdater {
 	private Logger logger = Logger.getLogger(CacheUpdater.class);
 	/**
-	 * The lists are synchronised because the application and the schedular can
-	 * update then concurrently.
+	 * The lists are synchronised because the application and the schedular can update then concurrently.
 	 */
 	private List<ThreeAlphaCode> threeAlphaCodeUsageList = Collections
 			.synchronizedList(new CopyOnWriteArrayList<ThreeAlphaCode>());
@@ -77,9 +74,8 @@ public class CacheUpdater {
 	 * 
 	 * multiplied with 1000 because of milliseconds 606600000
 	 * 
-	 * Objects in the cache live for exactly one week. Update of the cache may
-	 * take up to 30 minutes, probably less. Therefore this update runs every
-	 * week plus 30 minutes. This means that a fast response is guaranteed for
+	 * Objects in the cache live for exactly one week. Update of the cache may take up to 30 minutes, probably less.
+	 * Therefore this update runs every week plus 30 minutes. This means that a fast response is guaranteed for
 	 * 99.99702381%. Calculation: 100%-30minutes/(60minutes*24hours*7days)
 	 * 
 	 * 
@@ -101,8 +97,7 @@ public class CacheUpdater {
 	}
 
 	/**
-	 * Add a parameter to the threeAlphaCode usage List. This list will be used
-	 * later to update the cache.
+	 * Add a parameter to the threeAlphaCode usage List. This list will be used later to update the cache.
 	 * 
 	 * 
 	 * 
@@ -121,8 +116,7 @@ public class CacheUpdater {
 	}
 
 	/**
-	 * Delete all element at the beginning of the list if the lists exceeds
-	 * MAX_UPDATES number of elements.
+	 * Delete all element at the beginning of the list if the lists exceeds MAX_UPDATES number of elements.
 	 * 
 	 * @param anyList
 	 */

@@ -12,8 +12,7 @@ public class AreaInclusionDecision extends AreaDecision implements CodeAdditionD
 	}
 
 	/**
-	 * AreaInclusionDecision starts with result 100, AreaIntersectionDecision
-	 * with 200
+	 * AreaInclusionDecision starts with result 100, AreaIntersectionDecision with 200
 	 */
 	@Override
 	public int hashCode() {

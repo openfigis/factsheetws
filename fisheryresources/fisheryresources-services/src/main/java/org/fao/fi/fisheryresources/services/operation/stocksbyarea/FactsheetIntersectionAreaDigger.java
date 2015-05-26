@@ -27,8 +27,7 @@ public class FactsheetIntersectionAreaDigger extends FactsheetDiggerAbstract imp
 	}
 
 	/**
-	 * FactsheetSpeciesDigger starts with 100, FactsheetAreaDigger with 200,
-	 * FactsheetIntersectionAreaDigger with 300.
+	 * FactsheetSpeciesDigger starts with 100, FactsheetAreaDigger with 200, FactsheetIntersectionAreaDigger with 300.
 	 */
 	@Override
 	public int hashCode() {

@@ -10,5 +10,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "StocksBySpecies")
 public class StocksBySpecies extends StocksByElement {
 
-	
 }

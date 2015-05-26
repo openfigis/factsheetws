@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FIGISReferenceType", propOrder = { "foreignID" })
-@XmlSeeAlso( { WaterAreaRef.class, SpeciesRef.class })
+@XmlSeeAlso({ WaterAreaRef.class, SpeciesRef.class })
 public abstract class FIGISReference {
 
 	/**

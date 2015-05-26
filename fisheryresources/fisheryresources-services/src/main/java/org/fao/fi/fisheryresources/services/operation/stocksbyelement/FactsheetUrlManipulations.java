@@ -2,8 +2,7 @@ package org.fao.fi.fisheryresources.services.operation.stocksbyelement;
 
 /**
  * 
- * Convert an English xml resource factsheet url into an html url, taking the
- * language into account.
+ * Convert an English xml resource factsheet url into an html url, taking the language into account.
  * 
  * @author Erik van Ingen
  * 

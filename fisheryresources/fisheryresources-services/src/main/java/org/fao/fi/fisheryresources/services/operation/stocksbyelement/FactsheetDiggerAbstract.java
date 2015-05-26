@@ -25,10 +25,8 @@ public abstract class FactsheetDiggerAbstract {
 	private Set<String> nodeNameSet = new HashSet<String>();
 
 	/**
-	 * get all the element listed in the aquatic resource identifier element.
-	 * Assume that there is only 1 fi:AqRes and 1 fi:AqResIdent in the
-	 * factsheet. Assume that there can be more elementLists in 1
-	 * FIGISDoc/fi:AqRes/fi:AqResIdent
+	 * get all the element listed in the aquatic resource identifier element. Assume that there is only 1 fi:AqRes and 1
+	 * fi:AqResIdent in the factsheet. Assume that there can be more elementLists in 1 FIGISDoc/fi:AqRes/fi:AqResIdent
 	 * 
 	 * 
 	 * fi:FIGISDoc/fi:AqRes/fi:AqResIdent/fi:ElementList
@@ -80,8 +78,7 @@ public abstract class FactsheetDiggerAbstract {
 	}
 
 	/**
-	 * Add the element found in this ElementList to the node. Loop through the
-	 * Foreign Id's
+	 * Add the element found in this ElementList to the node. Loop through the Foreign Id's
 	 * 
 	 * Area listName = "WaterAreaList"
 	 * 

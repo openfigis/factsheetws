@@ -12,9 +12,8 @@ import org.springframework.stereotype.Service;
 import com.googlecode.ehcache.annotations.Cacheable;
 
 /**
- * The principle class for the fishery resource webservice. This class
- * represents the logical implementation for the webservice. This class does not
- * implement an interface because of the YAGNI principle. There would only be 1
+ * The principle class for the fishery resource webservice. This class represents the logical implementation for the
+ * webservice. This class does not implement an interface because of the YAGNI principle. There would only be 1
  * implementation.
  * 
  * 
@@ -29,8 +28,8 @@ public class FisheryResourcesService {
 	private CacheUpdater cacheUpdater;
 
 	/**
-	 * This service gives the stocks, given a certain species. Check for more
-	 * info http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources
+	 * This service gives the stocks, given a certain species. Check for more info
+	 * http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources
 	 * 
 	 */
 	@Cacheable(cacheName = "FisheryResourcesCache")

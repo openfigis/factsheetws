@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 
 /**
- * This class optimises the performance by hitting the operations which take a very
- * long time and which are loaded into a cache on the disk.
+ * This class optimises the performance by hitting the operations which take a very long time and which are loaded into
+ * a cache on the disk.
  * 
  * 
  * @author Erik van Ingen
@@ -26,9 +26,8 @@ public class CacheFiller {
 	private FactsheetDigger factsheetIntersectionAreaDigger;
 
 	/**
-	 * This cachefiller is here to fill in advance some lists which are used
-	 * intensively in the application. Check for the explanation of the number
-	 * 606600000 the docs in CacheUpdater.updateCache
+	 * This cachefiller is here to fill in advance some lists which are used intensively in the application. Check for
+	 * the explanation of the number 606600000 the docs in CacheUpdater.updateCache
 	 * 
 	 * 
 	 */
@@ -37,7 +36,7 @@ public class CacheFiller {
 	public void fillCache() {
 		StopWatch sw = new StopWatch("CacheFiller.fillCache");
 		sw.start();
-		logger.info("start CacheFiller.fillCache"); 
+		logger.info("start CacheFiller.fillCache");
 
 		elementResourceMapIntelligence.create1ResourceElementRelation(FactsheetLanguage.en, factsheetSpeciesDigger);
 		elementResourceMapIntelligence.create1ResourceElementRelation(FactsheetLanguage.fr, factsheetSpeciesDigger);
@@ -51,7 +50,7 @@ public class CacheFiller {
 				factsheetIntersectionAreaDigger);
 
 		sw.stop();
-		logger.info(sw.shortSummary()); 
+		logger.info(sw.shortSummary());
 	}
 
 	@Autowired

@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "OwnerType", propOrder = { "foreignID", "titleList" })
 public class Owner {
 
-	@XmlElement(name="ForeignID") 
+	@XmlElement(name = "ForeignID")
 	private ForeignID foreignID;
 
 	@XmlElements(@XmlElement(name = "Title", namespace = "http://purl.org/dc/elements/1.1/"))
@@ -33,6 +33,7 @@ public class Owner {
 		}
 		getTitleList().add(title);
 	}
+
 	public final ForeignID getForeignID() {
 		return foreignID;
 	}

@@ -2,46 +2,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.fao.figis</groupId>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>fisheryresources</artifactId>
+		<version>0.0.6</version>
+		<relativePath>..</relativePath>
+	</parent>
 	<artifactId>fisheryresources-services</artifactId>
-	<name>fisheryresources-services</name>
-	<version>0.0.5</version>
 	<description>Contains the service classes for the webservice. </description>
 	<url>http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/fisheryresources/trunk/fisheryresources-services</connection>
-	</scm>
-	<properties>
-		<spring.framework.version>3.0.3.RELEASE</spring.framework.version>
-	</properties>
-	<distributionManagement>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis-releases</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</distributionManagement>
-	<repositories>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</repositories>
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 
-		<!-- Spring  -->
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
@@ -74,40 +57,37 @@
 			<groupId>xmlunit</groupId>
 			<artifactId>xmlunit</artifactId>
 			<version>1.3</version>
-			<type>jar</type>
-			<scope>compile</scope>
+
+
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>resource-factsheet-marshall</artifactId>
-			<version>0.0.5</version>
+			<version>0.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>2.2</version>
-			<type>jar</type>
-			<scope>compile</scope>
+
+
 		</dependency>
 
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>fisheryresources-domain</artifactId>
-			<version>0.0.5</version>
-			<scope>compile</scope>
+			<version>0.0.6</version>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-services</artifactId>
-			<version>0.0.5</version>
-			<scope>compile</scope>
+			<version>0.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.5.11</version>
-			<type>jar</type>
-			<scope>compile</scope>
+
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -115,10 +95,4 @@
 			<version>1.2.16</version>
 		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.fao.factsheet</groupId>
-		<artifactId>fisheryresources</artifactId>
-		<version>0.0.6</version>
-		<relativePath>..</relativePath>
-	</parent>
 </project>

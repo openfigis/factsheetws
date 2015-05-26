@@ -27,9 +27,6 @@ public class FisheryResourceControllerTest extends FisheryResourcesBaseTest {
 		assertTrue(fisheryResourceController.retrieveStocksByFaoArea(area).getIntersection().getAqResList().size() > 5);
 	}
 
-	
-	
-	
 	@Autowired
 	public void setFisheryResourceController(FisheryResourceController fisheryResourceController) {
 		this.fisheryResourceController = fisheryResourceController;

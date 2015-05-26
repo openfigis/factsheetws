@@ -75,8 +75,8 @@ public abstract class RetrieveStocksByElementOperation {
 				for (Long resource : resourceList) {
 					String url = factsheetUrlComposer.composeFromDomainAndFactsheet(new FactsheetDiscriminator(
 							factsheetLanguage, DOMAIN, resource.toString()));
-					addOtherLanguageUrlAndTitle2response(response, parseFactsheetFrom(factsheetLanguage, resource
-							.toString()), url);
+					addOtherLanguageUrlAndTitle2response(response,
+							parseFactsheetFrom(factsheetLanguage, resource.toString()), url);
 				}
 			}
 		}
@@ -91,8 +91,8 @@ public abstract class RetrieveStocksByElementOperation {
 	}
 
 	/**
-	 * This method could be put in a cache. For instance in the case of Area 27,
-	 * 133 factsheets are found where the areas from need to be extracted.
+	 * This method could be put in a cache. For instance in the case of Area 27, 133 factsheets are found where the
+	 * areas from need to be extracted.
 	 * 
 	 * 
 	 * @param atLeastFoundfactsheetLanguage
@@ -161,14 +161,12 @@ public abstract class RetrieveStocksByElementOperation {
 	}
 
 	/**
-	 * This logic takes as the owner the organisational reference found in the
-	 * last factsheet.
+	 * This logic takes as the owner the organisational reference found in the last factsheet.
 	 * 
-	 * A factsheet has a list of organisation references. This logic takes the
-	 * first organisational reference.
+	 * A factsheet has a list of organisation references. This logic takes the first organisational reference.
 	 * 
-	 * A factsheet has a list of references. This logic takes the last ForeignID
-	 * reference which has both a code and codesystem.
+	 * A factsheet has a list of references. This logic takes the last ForeignID reference which has both a code and
+	 * codesystem.
 	 * 
 	 * 
 	 * Both titles and ForeignID are part of the OrgRef.

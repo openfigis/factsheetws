@@ -24,8 +24,7 @@ public class RetrieveStocksByFaoAreaOperationFastTest {
 	 * 
 	 * A request with as input parameter Area results in:
 	 * 
-	 * an inclusion element with stocks comprised by input parameter Area and
-	 * its sublevels.
+	 * an inclusion element with stocks comprised by input parameter Area and its sublevels.
 	 * 
 	 * 
 	 */

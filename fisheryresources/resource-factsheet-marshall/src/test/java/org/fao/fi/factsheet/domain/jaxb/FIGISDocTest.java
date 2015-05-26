@@ -43,12 +43,10 @@ public class FIGISDocTest extends XMLTestCase {
 
 		assertNotNull(object);
 		// get expected result from test factory
-		//FIGISDoc expectedResult = FIGISDocFactory.create();
+		// FIGISDoc expectedResult = FIGISDocFactory.create();
 
 		// test equality
-		//assertEquals("Unmarshalling FIGISDoc", expectedResult, object);
+		// assertEquals("Unmarshalling FIGISDoc", expectedResult, object);
 	}
 
-	
-	
 }

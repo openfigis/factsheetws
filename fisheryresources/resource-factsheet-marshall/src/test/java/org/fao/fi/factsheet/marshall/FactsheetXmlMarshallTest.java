@@ -12,7 +12,7 @@ public class FactsheetXmlMarshallTest {
 		FactsheetXmlMarshall m = new FactsheetXmlMarshall();
 		String url = "http://firms.fao.org/firms/xml/resource/10315/155383/en";
 		// http://firms.fao.org/firms/xml/resource/2218/en
-		
+
 		FIGISDoc fIGISDoc = m.unmarshal(url);
 		assertNotNull(fIGISDoc);
 		assertNotNull(fIGISDoc.getAqRes());

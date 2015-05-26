@@ -12,8 +12,7 @@ import org.apache.commons.lang.StringUtils;
  * 
  * When nothing is specified, it is an Object ID.
  * 
- * See for more analyses
- * http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice_Usecases
+ * See for more analyses http://figisapps.fao.org/FIGISwiki/index.php/Factsheet_Webservice_Usecases
  * 
  * 
  * @author Erik van Ingen

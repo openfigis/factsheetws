@@ -4,7 +4,7 @@ import org.fao.fi.fisheryresources.services.operation.stocksbyelement.CodeAdditi
 import org.fao.fi.fisheryresources.services.operation.stocksbyspecies.Decision;
 
 /**
- * Decision related to Are does need to know the area code requested by the client. 
+ * Decision related to Are does need to know the area code requested by the client.
  * 
  * 
  * @author Erik van Ingen

@@ -47,7 +47,7 @@ public class FigisID {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null ||getClass() != obj.getClass()) {
+		if (obj == null || getClass() != obj.getClass()) {
 			return false;
 		}
 		FigisID other = (FigisID) obj;
