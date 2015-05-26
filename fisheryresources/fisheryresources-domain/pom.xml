@@ -2,83 +2,54 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.fao.figis</groupId>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>fisheryresources</artifactId>
+		<version>0.0.6</version>
+	</parent>
 	<artifactId>fisheryresources-domain</artifactId>
-	<name>fisheryresources-domain</name>
-	<version>0.0.5</version>
-	<description>Contains the domain classes for the webservice. </description>
 	<url>http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/fisheryresources/trunk/fisheryresources-domain</connection>
-	</scm>
-	<repositories>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis-releases</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</distributionManagement>
+	
+	
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
+				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>process-resources</phase>
+						<id>copy-resources</id>
+						<phase>validate</phase>
 						<goals>
-							<goal>run</goal>
+							<goal>copy-resources</goal>
 						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/classes/org/fao/fi/fisheryresources/domain/stocksby/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/src/main/java/org/fao/fi/fisheryresources/domain/stocksby/</directory>
+									<includes>
+										<include>jaxb.index</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<tasks>
-						<copy file="src/main/java/org/fao/fi/fisheryresources/domain/stocksby/jaxb.index" tofile="target/classes/org/fao/fi/fisheryresources/domain/stocksby/jaxb.index" />
-					</tasks>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>com.sun.xml.bind</groupId>
-			<artifactId>jaxb-impl</artifactId>
-			<version>2.2</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.2</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.5</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.fao.figis</groupId>
-			<artifactId>figis-commons</artifactId>
-			<version>0.0.1</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
@@ -92,15 +63,16 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
-			<type>jar</type>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
+			<artifactId>figis-commons</artifactId>
+			<version>0.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>figis-commons-4test</artifactId>
-			<version>0.0.1</version>
-			<type>jar</type>
+			<version>0.0.6</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

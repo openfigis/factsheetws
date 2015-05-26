@@ -66,4 +66,10 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>fisheryresources</artifactId>
+		<version>0.0.6</version>
+		<relativePath>..</relativePath>
+	</parent>
 </project>
