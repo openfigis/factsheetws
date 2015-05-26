@@ -1,10 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.fao.figis</groupId>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>factsheet</artifactId>
+		<version>0.0.6</version>
+	</parent>
 	<artifactId>factsheet-services</artifactId>
-	<name>factsheet-services</name>
-	<version>0.0.7</version>
 	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
 	<properties>
 		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
@@ -20,23 +22,23 @@
 			</plugin>
 		</plugins>
 	</build>
-	  <repositories>
-        <repository>
-            <id>com.springsource.repository.bundles.release</id>
-            <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
-            <url>http://repository.springsource.com/maven/bundles/release</url>
-        </repository>
-        <repository>
-            <id>com.springsource.repository.bundles.external</id>
-            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
-            <url>http://repository.springsource.com/maven/bundles/external</url>
-        </repository> 
-        <repository>
-            <id>spring.maven.milestone</id>
-            <name>Spring Milestone Maven Repo</name>
-            <url>http://repository.springsource.com/maven/bundles/milestone</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<id>spring.maven.milestone</id>
+			<name>Spring Milestone Maven Repo</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -111,12 +113,6 @@
 			<version>2.2</version>
 			<type>jar</type>
 			<scope>compile</scope>
-		</dependency>		
+		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.fao.factsheet</groupId>
-		<artifactId>factsheet</artifactId>
-		<version>0.0.6</version>
-		<relativePath>..</relativePath>
-	</parent>
 </project>

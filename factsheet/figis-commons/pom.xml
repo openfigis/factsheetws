@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.fao.figis</groupId>
-	<artifactId>figis-commons</artifactId>
-	<name>figis-commons</name>
-	<version>0.0.2</version>
-	<description>Dependencies are all on test level, in order not to have these dependencies propagated to all upper level. </description>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>factsheet</artifactId>
+		<version>0.0.6</version>
+	</parent>
+	<artifactId>factsheet-commons</artifactId>
+
+
 	<url>http://km.fao.org/FIGISwiki/index.php/Figis-commons</url>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/fishstatj/trunk/figis-commons</connection>
-	</scm>
 	<properties>
-		<spring.framework.version>3.1.0.M2</spring.framework.version>
+		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
 	</properties>
 	<build>
 		<plugins>
@@ -68,10 +68,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.fao.factsheet</groupId>
-		<artifactId>factsheet</artifactId>
-		<version>0.0.6</version>
-		<relativePath>..</relativePath>
-	</parent>
 </project>

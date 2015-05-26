@@ -2,15 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>factsheet</artifactId>
+		<version>0.0.6</version>
+	</parent>
 	<artifactId>factsheet-integration-test</artifactId>
-	<name>factsheet-integration-test</name>
-	<version>0.0.7</version>
+
 	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
 
 	<properties>
 		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
 	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -77,10 +80,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.fao.factsheet</groupId>
-		<artifactId>factsheet</artifactId>
-		<version>0.0.6</version>
-		<relativePath>..</relativePath>
-	</parent>
 </project>

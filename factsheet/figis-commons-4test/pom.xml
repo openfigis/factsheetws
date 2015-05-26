@@ -2,14 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.fao.figis</groupId>
-	<artifactId>figis-commons-4test</artifactId>
-	<name>figis-commons-4test</name>
-	<version>0.0.2</version>
-	<description></description>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/fishstatj/trunk/figis-commons-4test</connection>
-	</scm>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>factsheet</artifactId>
+		<version>0.0.6</version>
+	</parent>
+	<artifactId>factsheet-commons-4test</artifactId>
 	<build>
 		<plugins>
 			<plugin>
@@ -22,20 +20,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis-releases</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.fao.figis</groupId>
@@ -51,10 +35,4 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.fao.factsheet</groupId>
-		<artifactId>factsheet</artifactId>
-		<version>0.0.6</version>
-		<relativePath>..</relativePath>
-	</parent>
 </project>
