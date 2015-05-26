@@ -13,7 +13,6 @@
 		<module>figis-commons</module>
 		<module>figis-commons-4test</module>
 		<module>factsheet-client</module>
-		<module>factsheet-integration-test</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
