@@ -33,25 +33,19 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-services</artifactId>
-			<version>0.0.7</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<version>0.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring.framework.version}</version>
-			<type>jar</type>
 			<scope>test</scope>
+			<type>pom</type>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>${spring.framework.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -63,9 +57,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
-			<version>${spring.framework.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>

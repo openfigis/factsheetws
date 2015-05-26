@@ -7,7 +7,7 @@
 		<artifactId>factsheet</artifactId>
 		<version>0.0.6</version>
 	</parent>
-	<artifactId>factsheet-commons-4test</artifactId>
+	<artifactId>figis-commons-4test</artifactId>
 	<build>
 		<plugins>
 			<plugin>
@@ -22,17 +22,21 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
-			<artifactId>figis-commons</artifactId>
-			<version>0.0.2</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>xmlunit</groupId>
 			<artifactId>xmlunit</artifactId>
 			<version>1.3</version>
 			<type>jar</type>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.fao.factsheet</groupId>
+			<artifactId>figis-commons</artifactId>
+			<version>0.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

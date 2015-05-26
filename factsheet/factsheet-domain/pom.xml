@@ -46,16 +46,16 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>figis-commons-4test</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.6</version>
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>figis-commons</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.6</version>
 		</dependency>
 	</dependencies>
 

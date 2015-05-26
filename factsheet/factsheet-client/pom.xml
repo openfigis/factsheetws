@@ -22,7 +22,7 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-domain</artifactId>
 			<version>0.0.6</version>
 			<type>jar</type>

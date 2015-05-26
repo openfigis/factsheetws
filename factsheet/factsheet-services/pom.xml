@@ -8,9 +8,6 @@
 	</parent>
 	<artifactId>factsheet-services</artifactId>
 	<url>http://km.fao.org/FIGISwiki/index.php/Factsheet_Webservice</url>
-	<properties>
-		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
-	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -41,35 +38,7 @@
 	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.framework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.framework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-			<version>${spring.framework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-			<version>${spring.framework.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${spring.framework.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-domain</artifactId>
 			<version>0.0.6</version>
 			<scope>compile</scope>
@@ -85,7 +54,30 @@
 			<groupId>com.googlecode.ehcache-spring-annotations</groupId>
 			<artifactId>ehcache-spring-annotations</artifactId>
 			<version>1.2.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-expression</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-aop</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+		</dependency>
+
+
+
+
+
 		<dependency>
 			<groupId>xmlunit</groupId>
 			<artifactId>xmlunit</artifactId>
@@ -94,11 +86,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>figis-commons</artifactId>
-			<version>0.0.2</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<version>0.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -113,6 +103,10 @@
 			<version>2.2</version>
 			<type>jar</type>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -46,9 +46,9 @@
 			<version>1.6.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-web</artifactId>
-			<version>0.0.7</version>
+			<version>0.0.6</version>
 			<type>war</type>
 			<scope>compile</scope>
 		</dependency>
@@ -59,17 +59,15 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>figis-commons-4test</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.6</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.fao.figis</groupId>
+			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-services</artifactId>
-			<version>0.0.7</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<version>0.0.6</version>
 		</dependency>
 		<!-- to solve this problem: Caused by: org.xml.sax.SAXNotRecognizedException: Feature 'http://javax.xml.XMLConstants/feature/secure-processing' 
 			is not recognized. -->

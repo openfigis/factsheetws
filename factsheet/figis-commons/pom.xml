@@ -7,13 +7,11 @@
 		<artifactId>factsheet</artifactId>
 		<version>0.0.6</version>
 	</parent>
-	<artifactId>factsheet-commons</artifactId>
+	<artifactId>figis-commons</artifactId>
 
 
 	<url>http://km.fao.org/FIGISwiki/index.php/Figis-commons</url>
-	<properties>
-		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>
-	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
