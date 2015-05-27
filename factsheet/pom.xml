@@ -31,6 +31,11 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.framework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
 				<artifactId>spring-oxm</artifactId>
 				<version>${spring.framework.version}</version>
 			</dependency>
@@ -63,9 +68,7 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-support</artifactId>
 				<version>${spring.framework.version}</version>
-				<type>jar</type>
-				<scope>compile</scope>
-			</dependency>
+					</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
