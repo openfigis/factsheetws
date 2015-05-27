@@ -32,7 +32,7 @@ public class FisheryResourcesServiceOwnerTest extends FisheryResourcesBaseTest {
 			assertNotNull(aqRes.getOwner().getForeignID());
 			assertNotNull(aqRes.getOwner().getTitleList().size() > 0);
 		}
-		assertEquals("IOTC", response.getAqResList().get(0).getOwner().getForeignID().getCode());
+		assertEquals("SCRS", response.getAqResList().get(0).getOwner().getForeignID().getCode());
 
 	}
 

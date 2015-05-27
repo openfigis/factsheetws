@@ -72,7 +72,7 @@ public class FisheryResourcesServiceTest extends FisheryResourcesBaseTest {
 		threeAlphaCode.setValue("ALB");
 		StocksBySpecies response = fisheryResourcesService.stocksBySpecies(threeAlphaCode);
 
-		assertEquals(9, response.getAqResList().size());
+		assertEquals(5, response.getAqResList().size(), 2);
 		assertEquals(1, response.getAqResList().get(0).getSpeciesListList().size());
 		assertEquals(1, response.getAqResList().get(1).getSpeciesListList().size());
 		assertEquals(1, response.getAqResList().get(0).getSpeciesListList().get(0).getSpeciesRefList().size());

@@ -85,7 +85,7 @@ public class FactsheetSpeciesDiggerTest {
 		String factsheetUrl = "http://firms.fao.org/firms/xml/resource/16001/en";
 		URL url = new URL(factsheetUrl);
 		List<String> list = factsheetDigger.dig(url);
-		assertEquals(19, list.size());
+		assertEquals(20, list.size(), 5);
 	}
 
 	@Test
