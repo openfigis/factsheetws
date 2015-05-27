@@ -23,7 +23,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "/applicationContext-fisheryresources-isolation.xml" })
+@ContextConfiguration(locations = "classpath:applicationContext-fisheryresources-isolation.xml")
 public class FisheryResourcesServiceIsolationTest {
 
 	FisheryResourcesService fisheryResourcesService;
