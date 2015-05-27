@@ -14,6 +14,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.log4j.Logger;
 import org.fao.fi.commons.FigisException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -28,6 +29,8 @@ import org.xml.sax.SAXException;
  */
 
 public class ValuePicker {
+
+	private static Logger logger = Logger.getLogger(ValuePicker.class);
 
 	/**
 	 * Utility classes should not have a public or default constructor.
@@ -69,14 +72,19 @@ public class ValuePicker {
 			XPath xpath = factory.newXPath();
 			xpath.setNamespaceContext(new FisheryResourceNamespace());
 			XPathExpression expr = xpath.compile(xPathExpresssion);
+
 			return expr.evaluate(doc, qname);
 		} catch (ParserConfigurationException e) {
+			logger.error(xmlUrl + " " + xPathExpresssion + " " + qname.getLocalPart() + " ", e);
 			throw new FigisException(e);
 		} catch (IOException e) {
+			logger.error(xmlUrl + " " + xPathExpresssion + " " + qname.getLocalPart() + " ", e);
 			throw new FigisException(e);
 		} catch (SAXException e) {
+			logger.error(xmlUrl + " " + xPathExpresssion + " " + qname.getLocalPart() + " ", e);
 			throw new FigisException(e);
 		} catch (XPathExpressionException e) {
+			logger.error(xmlUrl + " " + xPathExpresssion + " " + qname.getLocalPart() + " ", e);
 			throw new FigisException(e);
 		}
 
@@ -90,6 +98,7 @@ public class ValuePicker {
 			XPathExpression expr = xpath.compile(xPathExpresssion);
 			return (String) expr.evaluate(node, XPathConstants.STRING);
 		} catch (XPathExpressionException e) {
+			logger.error(node.getNodeValue() + " " + xPathExpresssion + " ", e);
 			throw new FigisException(e);
 		}
 
@@ -103,6 +112,7 @@ public class ValuePicker {
 			XPathExpression expr = xpath.compile(xPathExpresssion);
 			return (Node) expr.evaluate(node, XPathConstants.NODE);
 		} catch (XPathExpressionException e) {
+			logger.error(node.getNodeValue() + " " + xPathExpresssion + " ", e);
 			throw new FigisException(e);
 		}
 
