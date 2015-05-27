@@ -8,7 +8,7 @@
 		<version>0.0.6</version>
 	</parent>
 	<artifactId>fisheryresources-domain</artifactId>
-	<url>http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
+	<url>http://figisapps.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
 	
 	
 	<build>

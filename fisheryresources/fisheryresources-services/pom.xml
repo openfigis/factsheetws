@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>fisheryresources-services</artifactId>
 	<description>Contains the service classes for the webservice. </description>
-	<url>http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
+	<url>http://figisapps.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
 	<build>
 		<plugins>
 			<plugin>

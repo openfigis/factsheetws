@@ -29,7 +29,7 @@ public class FisheryResourcesService {
 
 	/**
 	 * This service gives the stocks, given a certain species. Check for more info
-	 * http://km.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources
+	 * http://figisapps.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources
 	 * 
 	 */
 	@Cacheable(cacheName = "FisheryResourcesCache")
