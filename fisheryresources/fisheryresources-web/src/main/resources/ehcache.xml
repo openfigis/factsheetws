@@ -5,10 +5,10 @@
 
 
 	<!--
-		Location of persistent caches on disk. 003 is the version of the application (0.0.3). The cache is versioned to make
+		Location of persistent caches on disk. 006 is the version of the application (0.0.6). The cache is versioned to make
 		sure that the content will not conflict with previous versions.
 	-->
-	<diskStore path="java.io.tmpdir/fisheryresources-web-005" />
+	<diskStore path="java.io.tmpdir/fisheryresources-web-006" />
 
 	<!--  this one is not used -->
 	<defaultCache maxElementsInMemory="500" eternal="true" overflowToDisk="false" />
