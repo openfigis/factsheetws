@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 
 import org.fao.fi.fisheryresources.domain.stocksby.StocksBySpecies;
 import org.fao.fi.fisheryresources.services.vo.ThreeAlphaCode;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class FisheryResourcesServiceIsolationTest {
 	FisheryResourcesService fisheryResourcesService;
 
 	@Test
+	@Ignore
 	public void testRetrieveStocksBySpeciesResponseIsolated() {
 		ThreeAlphaCode threeAlphaCode = new ThreeAlphaCode();
 		threeAlphaCode.setValue("ALB");
