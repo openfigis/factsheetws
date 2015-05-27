@@ -80,7 +80,6 @@
 	</dependencies>
 	<modules>
 		<module>fisheryresources-domain</module>
-		<module>fisheryresources-integrationtest</module>
 		<module>fisheryresources-services</module>
 		<module>fisheryresources-web</module>
 		<module>resource-factsheet-marshall</module>
