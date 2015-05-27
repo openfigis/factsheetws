@@ -2,55 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.fao.factsheet</groupId>
+	<parent>
+		<groupId>org.fao.factsheet</groupId>
+		<artifactId>fisheryresources</artifactId>
+		<version>0.0.6</version>
+	</parent>
 	<artifactId>fisheryresources-web</artifactId>
-	<name>fisheryresources-web</name>
-	<version>0.0.6</version>
-	<description></description>
 	<packaging>war</packaging>
-	<url>http://figis02:9000/fisheryresources-web-0.0.1</url>
-	<ciManagement>
-		<system>Continuum</system>
-		<url>http://figis02:7000/continuum/projectGroupSummary.action?projectGroupId=26</url>
-	</ciManagement>
-	<scm>
-		<connection>scm:svn:https://openfigis.svn.sourceforge.net/svnroot/openfigis/fisheryresources/trunk/fisheryresources-web
-		</connection>
-		<url>http://openfigis.svn.sourceforge.net/viewvc/openfigis/fisheryresources/trunk/fisheryresources-web</url>
-	</scm>
-	<properties>
-		<spring.framework.version>3.0.3.RELEASE</spring.framework.version>
-	</properties>
-	<distributionManagement>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis-releases</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</distributionManagement>
-	<repositories>
-		<repository>
-			<id>openfigis</id>
-			<name>openfigis</name>
-			<url>http://78.46.99.131:8080/artifactory/libs-releases-local</url>
-		</repository>
-	</repositories>
 	<build>
+		<finalName>fisheryresources-web</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>tomcat-maven-plugin</artifactId>
-				<configuration>
-					<server>tomcat</server>
-					<update>true</update>
-					<url>http://figis02:8888/manager/html</url>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -72,15 +38,14 @@
 			<version>${spring.framework.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.framework.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.fao.factsheet</groupId>
 			<artifactId>fisheryresources-services</artifactId>
 			<version>0.0.6</version>
 		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.fao.factsheet</groupId>
-		<artifactId>fisheryresources</artifactId>
-		<version>0.0.6</version>
-		<relativePath>..</relativePath>
-	</parent>
 </project>
