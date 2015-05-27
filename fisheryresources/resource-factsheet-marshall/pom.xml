@@ -43,6 +43,11 @@
 			<version>0.0.6</version>
 		</dependency>
 		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<dependency>
 			<groupId>com.googlecode.ehcache-spring-annotations</groupId>
 			<artifactId>ehcache-spring-annotations</artifactId>
 			<version>1.2.0</version>
@@ -54,6 +59,10 @@
 				<exclusion>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-aop</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>ehcache-core</artifactId>
+					<groupId>net.sf.ehcache</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
