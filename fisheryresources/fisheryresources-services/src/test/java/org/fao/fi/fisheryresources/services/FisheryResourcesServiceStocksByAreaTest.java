@@ -16,8 +16,8 @@ public class FisheryResourcesServiceStocksByAreaTest extends FisheryResourcesBas
 		String faoArea = "27";
 		StocksByFaoArea response = fisheryResourcesService.retrieveStocksByFaoArea(faoArea);
 
-		assertEquals(194, response.getInclusion().getAqResList().size(), 5);
-		assertEquals(133, response.getIntersection().getAqResList().size(), 5);
+		assertEquals(194, response.getInclusion().getAqResList().size(), 20);
+		assertEquals(148.0, response.getIntersection().getAqResList().size(), 20);
 
 	}
 
