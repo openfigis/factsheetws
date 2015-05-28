@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.fao.fi.factsheetwebservice.domain.DynamicDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
-import org.fao.fi.logical.domain.DynamicDomain;
 import org.fao.fi.logical.domain.RetrieveFactsheetListResponse;
 import org.fao.fi.logical.domain.RetrieveFactsheetPerDomainListRequest;
 import org.fao.fi.logical.domain.RetrieveFactsheetRequest;
