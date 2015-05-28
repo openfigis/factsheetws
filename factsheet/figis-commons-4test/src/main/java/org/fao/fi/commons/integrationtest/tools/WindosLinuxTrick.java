@@ -1,8 +1,7 @@
 package org.fao.fi.commons.integrationtest.tools;
 
 /**
- * Assumed is that developers work on Windows and the integration test are
- * running on Linux.
+ * Assumed is that developers work on Windows and the integration test are running on Linux.
  * 
  * 
  * @author Erik van Ingen

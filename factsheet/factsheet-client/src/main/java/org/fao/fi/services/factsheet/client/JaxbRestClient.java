@@ -17,7 +17,6 @@ class JaxbRestClient {
 
 	private String restWebserverUrl;
 
-	
 	public JaxbRestClient(String restWebserverUrl) {
 		this.restWebserverUrl = restWebserverUrl;
 	}

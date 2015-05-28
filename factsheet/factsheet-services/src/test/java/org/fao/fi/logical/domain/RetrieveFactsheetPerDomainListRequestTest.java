@@ -9,8 +9,7 @@ import org.junit.Test;
 public class RetrieveFactsheetPerDomainListRequestTest {
 
 	/**
-	 * this test is not exhaustive because it does not simulate more than 1
-	 * execution of Java.
+	 * this test is not exhaustive because it does not simulate more than 1 execution of Java.
 	 * 
 	 * 
 	 * @throws InterruptedException
@@ -31,7 +30,6 @@ public class RetrieveFactsheetPerDomainListRequestTest {
 
 		assertEquals(FactsheetLanguage.en.hashCode(), FactsheetLanguage.en.hashCode());
 		assertEquals(FactsheetLanguage.en.hashCode(), FactsheetLanguage.en.hashCode());
-
 
 	}
 }

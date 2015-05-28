@@ -3,8 +3,8 @@ package org.fao.fi.services.factsheet.client;
 /**
  * FactsheetClientException is a RuntimeException
  * 
- * To avoid loads of try catches in the code, FactsheetClientException is a runtime
- * exception. This assumes however that all code is very well unit tested!
+ * To avoid loads of try catches in the code, FactsheetClientException is a runtime exception. This assumes however that
+ * all code is very well unit tested!
  * 
  * 
  * @author Erik van Ingen

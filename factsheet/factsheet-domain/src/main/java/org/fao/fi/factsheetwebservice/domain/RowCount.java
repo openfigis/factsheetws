@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FIGISReferenceType", propOrder = { "itemCount" })
-@XmlSeeAlso( { FactsheetList.class, LanguageList.class })
+@XmlSeeAlso({ FactsheetList.class, LanguageList.class })
 public class RowCount {
 
 	@XmlAttribute

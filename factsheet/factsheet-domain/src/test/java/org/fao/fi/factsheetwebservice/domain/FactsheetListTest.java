@@ -6,7 +6,6 @@ import org.fao.fi.commons.test.tools.JaxbXmlTestCase;
 
 public class FactsheetListTest extends JaxbXmlTestCase {
 
-	
 	public FactsheetListTest() {
 		this.file = new File("src/test/resources/webservice/FactsheetList.xml");
 
@@ -20,14 +19,12 @@ public class FactsheetListTest extends JaxbXmlTestCase {
 		b.setLanguage(FactsheetLanguage.en);
 		b.setDomain(FactsheetDomain.resource);
 		b.setFactsheet("5");
-		
-		
+
 		o.getFactsheetList().add(a);
 		o.getFactsheetList().add(b);
 		o.setRowCount(o.getFactsheetList().size());
 		this.expectedResult = o;
 		this.domainClass = FactsheetList.class;
 	}
-
 
 }

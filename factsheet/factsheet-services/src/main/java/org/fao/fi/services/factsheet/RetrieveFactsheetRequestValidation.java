@@ -4,8 +4,6 @@ import org.fao.fi.logical.domain.RetrieveFactsheetRequest;
 
 public class RetrieveFactsheetRequestValidation {
 
-
-
 	public RetrieveFactsheetRequestValidation(RetrieveFactsheetRequest request) {
 		if (request.getDomain() == null) {
 			throw new FactsheetException("Domain in the request is not filled(null)");

@@ -10,7 +10,6 @@ import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FactsheetListType", propOrder = { "factsheetList" })
 @XmlRootElement(name = "FactsheetList")

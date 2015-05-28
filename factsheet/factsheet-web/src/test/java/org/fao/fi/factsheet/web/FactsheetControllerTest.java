@@ -72,8 +72,8 @@ public class FactsheetControllerTest {
 
 	@Test
 	public void testRetrieveLanguageListInDomain4ThisFactsheet() {
-		LanguageList l = factsheetController.retrieveLanguageListInDomain4ThisFactsheet1(FactsheetDomain.countrysector
-				.name(), "naso_albania");
+		LanguageList l = factsheetController.retrieveLanguageListInDomain4ThisFactsheet1(
+				FactsheetDomain.countrysector.name(), "naso_albania");
 		assertEquals(5, l.getRowCount());
 		assertEquals(l.getLanguageList().size(), l.getRowCount());
 		l = factsheetController.retrieveLanguageListInDomain4ThisFactsheet2(FactsheetDomain.countrysector.name(),

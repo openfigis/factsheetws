@@ -16,7 +16,7 @@ import org.w3c.dom.Node;
 @ContextConfiguration(locations = { "/applicationContext-factsheet.xml" })
 public class FactsheetServicePerformXpathTest {
 
-	FactsheetService factsheetService ;
+	FactsheetService factsheetService;
 	FactsheetLanguage lang = FactsheetLanguage.en;
 
 	@Test

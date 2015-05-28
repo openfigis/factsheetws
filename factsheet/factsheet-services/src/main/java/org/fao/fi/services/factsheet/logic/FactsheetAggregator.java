@@ -7,18 +7,17 @@ import java.util.Set;
 
 import org.fao.fi.commons.FigisException;
 import org.fao.fi.factsheet.search.binding.FactsheetSearchXmlBinder;
+import org.fao.fi.factsheetwebservice.domain.DynamicDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
-import org.fao.fi.logical.domain.DynamicDomain;
-import org.fao.fi.logical.domain.StaticDomain;
+import org.fao.fi.factsheetwebservice.domain.StaticDomain;
 import org.fao.fi.logical.domain.factsheet.search.ResultItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * FactsheetAggregator aggregates over all domains and composes a list of all
- * the published factsheets.
+ * FactsheetAggregator aggregates over all domains and composes a list of all the published factsheets.
  * 
  * It uses the class DomainServer in order to retrieve the list of domains.
  * 
@@ -40,8 +39,7 @@ public class FactsheetAggregator {
 	}
 
 	/**
-	 * This method has a static cache. This should be replaced by a dynamic
-	 * cache.
+	 * This method has a static cache. This should be replaced by a dynamic cache.
 	 * 
 	 * 
 	 * @param lang
@@ -56,6 +54,7 @@ public class FactsheetAggregator {
 		}
 		DynamicDomain dds[] = DynamicDomain.values();
 		for (DynamicDomain dynamicDomain : dds) {
+			System.out.println(dynamicDomain.name());
 			factsheetDiscriminatorList.addAll(getFactsheetsPerDomainAndLanguage(dynamicDomain.name(), lang));
 
 		}
@@ -100,10 +99,13 @@ public class FactsheetAggregator {
 		for (ResultItem r : resultList) {
 			// add only to the list when the factsheet is published
 			if (entitled(r)) {
-				FactsheetDiscriminator d = factsheetUrlComposer.composeDiscriminator(r.getDs(), r.getUrl());
+
+				String domainUnderstood = retrieveDomainWithException(r.getDs());
+
+				FactsheetDiscriminator d = factsheetUrlComposer.composeDiscriminator(domainUnderstood, r.getUrl());
 				// do not retrieve the language from the url but assume
 				// that is the same language as it has been requested.
-				String composedId = d.getDomain() + d.getFactsheet();
+				String composedId = domainUnderstood + d.getFactsheet();
 				boolean languageDesired = false;
 				for (FactsheetLanguage lang : langs) {
 					if (lang.equals(d.getLanguage())) {
@@ -116,39 +118,22 @@ public class FactsheetAggregator {
 			}
 		}
 
-		if (factsheetDiscriminatorList.size() == 0) {
-			for (ResultItem r : resultList) {
-				// add only to the list when the factsheet is published
-				if (entitled(r)) {
-					FactsheetDiscriminator d = factsheetUrlComposer.composeDiscriminator(r.getDs(), r.getUrl());
-					// do not retrieve the language from the url but assume
-					// that is the same language as it has been requested.
-					String composedId = d.getDomain() + d.getFactsheet();
-					boolean languageDesired = false;
-					for (FactsheetLanguage lang : langs) {
-						if (lang.equals(d.getLanguage())) {
-							languageDesired = true;
-						}
-					}
-					if (!blackList.contains(composedId) && languageDesired) {
-						factsheetDiscriminatorList.add(d);
-					}
-				}
-			}
-
-		}
-
 		// factsheetDiscriminatorList
 		return factsheetDiscriminatorList;
 	}
 
+	private String retrieveDomainWithException(String ds) {
+		if (ds.equals("institute")) {
+			ds = DynamicDomain.organization.name();
+		}
+		return ds;
+	}
+
 	/**
-	 * The following rules should apply before an object is valid: (1) The
-	 * status should be 2 or 3. (2) The url should end with en. (3) The id
-	 * should not already have been used.
+	 * The following rules should apply before an object is valid: (1) The status should be 2 or 3. (2) The url should
+	 * end with en. (3) The id should not already have been used.
 	 * 
-	 * And this url is excluded for now:
-	 * /fi/website/FIRetrieveAction.do?dom=speciesgroup&xml=tunalike.xml&lang=en
+	 * And this url is excluded for now: /fi/website/FIRetrieveAction.do?dom=speciesgroup&xml=tunalike.xml&lang=en
 	 * 
 	 * Cases 2 and 3 are errors in the feed.
 	 * 

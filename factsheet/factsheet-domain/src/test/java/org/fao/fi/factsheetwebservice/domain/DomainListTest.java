@@ -4,10 +4,8 @@ import java.io.File;
 
 import org.fao.fi.commons.test.tools.JaxbXmlTestCase;
 
-
 public class DomainListTest extends JaxbXmlTestCase {
 
-	
 	public DomainListTest() {
 		this.file = new File("src/test/resources/webservice/DomainList.xml");
 
@@ -19,6 +17,5 @@ public class DomainListTest extends JaxbXmlTestCase {
 
 		this.domainClass = DomainList.class;
 	}
-
 
 }

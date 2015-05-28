@@ -19,8 +19,7 @@ public class RestWebserviceIntegrationTest {
 	RestServerTester restServerTester = new RestServerTester();
 
 	/**
-	 * Construct object with the url for the linux and the local (windows)
-	 * server.
+	 * Construct object with the url for the linux and the local (windows) server.
 	 * 
 	 * @param linuxUrl
 	 * @param windowsUrl

@@ -17,8 +17,8 @@ public class FactsheetUrlComposerTest {
 
 		String domain = "staticxml.area";
 		String url = "/fi/website/FIRetrieveAction.do?dom=area&xml=Area88.xml&lang=en";
-		assertEquals("http://www.fao.org/fishery/xml/area/Area88/en", factsheetUrlComposer.composeStatic(domain, url,
-				lang));
+		assertEquals("http://www.fao.org/fishery/xml/area/Area88/en",
+				factsheetUrlComposer.composeStatic(domain, url, lang));
 
 		try {
 			domain = "explode";

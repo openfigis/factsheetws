@@ -18,15 +18,16 @@ public class FsSearchResultJaxbTest extends JaxbXmlTestCase {
 		resultItem.setDs("staticxml.vmstopic");
 		resultItem.setName("Security of VMS information");
 		resultItem.setType("weblink");
-		resultItem.setUrl("/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=14_Security_Of_VMS_Information.xml&amp;lang=en");
-		
+		resultItem
+				.setUrl("/fi/website/FIRetrieveAction.do?dom=vmstopic&amp;xml=14_Security_Of_VMS_Information.xml&amp;lang=en");
+
 		FsSearchResult result = new FsSearchResult();
 		result.setRowcount(1);
 		result.setTime(10);
 		List<ResultItem> list = new ArrayList<ResultItem>();
 		list.add(resultItem);
 		result.setResultItemList(list);
-		
+
 		this.expectedResult = result;
 		this.domainClass = FsSearchResult.class;
 	}

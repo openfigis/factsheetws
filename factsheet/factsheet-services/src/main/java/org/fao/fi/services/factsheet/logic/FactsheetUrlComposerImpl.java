@@ -83,8 +83,8 @@ public class FactsheetUrlComposerImpl implements FactsheetUrlComposer {
 		String domainFound = url.substring(positionDomain + 4, positionXml);
 		String name = url.substring(positionXml + 5, positionLang - 4);
 		String lang = url.substring(positionLang + 6, positionLang + 8);
-		FactsheetDiscriminator vo = new FactsheetDiscriminator(FactsheetLanguage.parseLanguage(lang), FactsheetDomain
-				.parseDomain(domainFound), name);
+		FactsheetDiscriminator vo = new FactsheetDiscriminator(FactsheetLanguage.parseLanguage(lang),
+				FactsheetDomain.parseDomain(domainFound), name);
 		return vo;
 	}
 
@@ -102,8 +102,8 @@ public class FactsheetUrlComposerImpl implements FactsheetUrlComposer {
 		String lang = url.substring(positionLang + 6, positionLang + 8);
 		String domainFound = url.substring(positionDomain + 4, positionFid);
 		String name = url.substring(positionFid + 5, positionLang);
-		FactsheetDiscriminator vo = new FactsheetDiscriminator(FactsheetLanguage.parseLanguage(lang), FactsheetDomain
-				.parseDomain(domainFound), name);
+		FactsheetDiscriminator vo = new FactsheetDiscriminator(FactsheetLanguage.parseLanguage(lang),
+				FactsheetDomain.parseDomain(domainFound), name);
 		return vo;
 	}
 

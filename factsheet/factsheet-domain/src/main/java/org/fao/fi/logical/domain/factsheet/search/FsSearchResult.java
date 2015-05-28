@@ -12,8 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Logical classes for
- * http://www.fao.org/fishery/factsheets/search/xml/vmstopic/en
+ * Logical classes for http://www.fao.org/fishery/factsheets/search/xml/vmstopic/en
  * 
  * @author Erik van Ingen
  * 

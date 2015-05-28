@@ -3,8 +3,8 @@ package org.fao.fi.commons;
 /**
  * FigisException is a RuntimeException
  * 
- * To avoid loads of try catches in the code, FigisException is a runtime
- * exception. This assumes however that all code is very well unit tested!
+ * To avoid loads of try catches in the code, FigisException is a runtime exception. This assumes however that all code
+ * is very well unit tested!
  * 
  * 
  * @author Erik van Ingen

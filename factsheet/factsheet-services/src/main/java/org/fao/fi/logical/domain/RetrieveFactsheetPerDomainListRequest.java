@@ -15,9 +15,8 @@ public class RetrieveFactsheetPerDomainListRequest extends RetrieveFactsheetList
 	}
 
 	/**
-	 * In order to have the cache (@Cacheable(cacheName =
-	 * "FactsheetServicesCache") working correctly, calculate a correct hash
-	 * code.
+	 * In order to have the cache (@Cacheable(cacheName = "FactsheetServicesCache") working correctly, calculate a
+	 * correct hash code.
 	 */
 	@Override
 	public int hashCode() {

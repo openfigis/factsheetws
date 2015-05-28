@@ -85,17 +85,16 @@ public class FactsheetService {
 
 	/**
 	 * 
-	 * @deprecated replaced by
-	 *             retrieveFactsheetListPerDomainAndLanguage(FactsheetDomain
-	 *             domain, FactsheetLanguage language
+	 * @deprecated replaced by retrieveFactsheetListPerDomainAndLanguage(FactsheetDomain domain, FactsheetLanguage
+	 *             language
 	 * 
 	 */
 	@Cacheable(cacheName = CACHE)
 	public RetrieveFactsheetListResponse retrieveFactsheetListPerDomainAndLanguage(
 			RetrieveFactsheetPerDomainListRequest request) {
 		RetrieveFactsheetListResponse response = new RetrieveFactsheetListResponse();
-		response.setFactsheetDiscriminatorList(factsheetAggregator.getFactsheetsPerDomainAndLanguage(request
-				.getDomain(), request.getLanguage()));
+		response.setFactsheetDiscriminatorList(factsheetAggregator.getFactsheetsPerDomainAndLanguage(
+				request.getDomain(), request.getLanguage()));
 		return response;
 	}
 

@@ -5,14 +5,11 @@ import org.fao.fi.commons.FigisException;
 public enum FactsheetDomain {
 
 	// dynamic domains
-	resource, fishery, fishtech, geartype, vesseltype, species, topic, introsp,
+	facp, fishery, fishtech, geartype, introsp, organization, resource, species, topic, vesseltype,
 
 	// static domains
-	area, collection, countrysector, equipment, legalframework, ontology, org, psm,  culturespecies;
+	area, collection, countrysector, culturespecies, eaftool, equipment, legalframework, ontology, org, psm;
 
-	
-
-	
 	public static FactsheetDomain parseDomain(String factsheetDomain) {
 		if (factsheetDomain == null) {
 			throw new FigisException("factsheetDomain is empty");

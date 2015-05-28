@@ -12,10 +12,8 @@ public class FactsheetLanguageTest {
 		assertEquals(FactsheetLanguage.en, FactsheetLanguage.parseLanguage("en"));
 		assertEquals(FactsheetLanguage.en, FactsheetLanguage.parseLanguage("EN"));
 
-
 		assertEquals(FactsheetLanguage.fr, FactsheetLanguage.parseLanguage("fr"));
 		assertEquals(FactsheetLanguage.fr, FactsheetLanguage.parseLanguage("FR"));
-
 
 		try {
 			FactsheetLanguage.parseLanguage("NL");

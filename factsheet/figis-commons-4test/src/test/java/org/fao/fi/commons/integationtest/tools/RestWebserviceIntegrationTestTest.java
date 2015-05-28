@@ -20,11 +20,9 @@ public class RestWebserviceIntegrationTestTest {
 	}
 
 	/**
-	 * Test moved to /sdmx-publisher-web-spring/src/test/java/org/fao/fi/test/
-	 * RestWebserviceIntegrationTestTest.java
+	 * Test moved to /sdmx-publisher-web-spring/src/test/java/org/fao/fi/test/ RestWebserviceIntegrationTestTest.java
 	 * 
-	 * because it can't be tested in the project itself because maven does not
-	 * allow circular dependencies.
+	 * because it can't be tested in the project itself because maven does not allow circular dependencies.
 	 */
 
 	@Test

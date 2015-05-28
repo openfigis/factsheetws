@@ -11,7 +11,7 @@ public class FsSearchResultJaxbRealTest {
 
 	RestServerTester restServerTester = new RestServerTester();
 
-	//@Test
+	// @Test
 	public void testFsSearchResultJaxbTestResource() {
 
 		String url = "http://www.fao.org/fishery/factsheets/search/xml/resource/en";

@@ -9,8 +9,7 @@ import javax.xml.bind.Unmarshaller;
 import org.fao.fi.commons.JaxbValidationEventHandler;
 
 /**
- * Making a seperate one for marshalling because that one will be used also
- * separately
+ * Making a seperate one for marshalling because that one will be used also separately
  * 
  * @author Erik van Ingen
  * 

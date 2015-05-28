@@ -55,8 +55,8 @@ public class FactsheetServiceTest extends XMLTestCase {
 	/**
 	 * French
 	 * 
-	 * These are the french factsheets at 23 april 2010 10112 10113 10114 10115
-	 * 10119 10120 10121 10123 10131 10132 10133 10135 10145 10148
+	 * These are the french factsheets at 23 april 2010 10112 10113 10114 10115 10119 10120 10121 10123 10131 10132
+	 * 10133 10135 10145 10148
 	 * 
 	 */
 	@Test
@@ -65,8 +65,7 @@ public class FactsheetServiceTest extends XMLTestCase {
 	}
 
 	/**
-	 * English and French There are no cases in which a French one has also an
-	 * English one.
+	 * English and French There are no cases in which a French one has also an English one.
 	 * 
 	 */
 	public void testRetrieveFactsheetListPerDomainEnglishAndFrench() {

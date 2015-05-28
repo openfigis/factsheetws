@@ -19,7 +19,7 @@ public class FactsheetDomainTest {
 			fail();
 		} catch (Exception e) {
 		}
-		
+
 		assertEquals(FactsheetDomain.equipment.name(), "equipment");
 	}
 

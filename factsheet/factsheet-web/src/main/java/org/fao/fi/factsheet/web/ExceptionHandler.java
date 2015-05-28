@@ -9,7 +9,7 @@ import javax.xml.transform.stream.StreamSource;
 import org.fao.fi.services.factsheet.FactsheetService;
 
 /**
- * Generic exception handler for the weblayer for Source related messages. 
+ * Generic exception handler for the weblayer for Source related messages.
  * 
  * @author Erik van Ingen
  *
