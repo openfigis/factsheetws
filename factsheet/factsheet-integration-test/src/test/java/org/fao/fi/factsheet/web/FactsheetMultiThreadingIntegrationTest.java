@@ -31,7 +31,7 @@ public class FactsheetMultiThreadingIntegrationTest {
 		DomainList domainList1 = (DomainList) fut1.getObject();
 		FactsheetList factsheetList1 = (FactsheetList) fut2.getObject();
 		FactsheetList factsheetList2 = (FactsheetList) fut3.getObject();
-		assertEquals(17, domainList1.getRowCount());
+		assertEquals(20, domainList1.getRowCount(), 5);
 		assertTrue(factsheetList1.getRowCount() > 350);
 		assertTrue(factsheetList1.getRowCount() < 700);
 		assertEquals(factsheetList1.getRowCount(), factsheetList2.getRowCount());
