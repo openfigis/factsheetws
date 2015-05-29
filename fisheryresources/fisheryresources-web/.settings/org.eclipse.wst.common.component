@@ -13,7 +13,7 @@
         <dependent-module archiveName="figis-commons-0.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/figis-commons/figis-commons">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="fimes-jaxb-0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/fimes-jaxb/fimes-jaxb">
+        <dependent-module archiveName="fimes-jaxb-0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/fimes-jaxb/fimes-jaxb">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="fisheryresources-domain-0.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/fisheryresources-domain/fisheryresources-domain">
