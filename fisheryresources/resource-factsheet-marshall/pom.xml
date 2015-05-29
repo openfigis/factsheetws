@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>org.fao</groupId>
 			<artifactId>fimes-jaxb</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
