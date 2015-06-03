@@ -10,7 +10,7 @@
 	<artifactId>fisheryresources-web</artifactId>
 	<packaging>war</packaging>
 	<build>
-		<finalName>fisheryresources-web</finalName>
+		<finalName>figis#ws#fisheryresources</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
