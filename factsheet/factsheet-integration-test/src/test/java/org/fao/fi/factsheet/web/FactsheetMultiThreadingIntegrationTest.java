@@ -9,8 +9,8 @@ import org.fao.fi.factsheetwebservice.domain.FactsheetList;
 import org.junit.Test;
 
 public class FactsheetMultiThreadingIntegrationTest {
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest("http://hqldvfigis2:9999/factsheet-web/",
-			"http://localhost:8080/factsheet-web/");
+	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest(
+			"http://hqldvfigis2:9999/figis/ws/factsheets/", "http://localhost:8080/factsheet-web/");
 
 	String response;
 
