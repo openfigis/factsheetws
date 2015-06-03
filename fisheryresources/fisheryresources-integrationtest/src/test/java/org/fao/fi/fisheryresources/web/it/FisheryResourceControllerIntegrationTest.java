@@ -10,7 +10,7 @@ import org.junit.Test;
 public class FisheryResourceControllerIntegrationTest {
 
 	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest(
-			"http://hqldvfigis2:9999/fisheryresources-web/", "http://localhost:8080/fisheryresources-web/");
+			"http://hqldvfigis2:9999/figis/ws/fisheryresources/", "http://localhost:8080/fisheryresources-web/");
 
 	/**
 	 * Can only run with a running server.
