@@ -3,15 +3,11 @@ package org.fao.fi.factsheet.web;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 import org.fao.fi.factsheetwebservice.domain.DomainList;
 import org.fao.fi.factsheetwebservice.domain.FactsheetList;
 import org.junit.Test;
 
 public class FactsheetMultiThreadingIntegrationTest {
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest(
-			"http://hqldvfigis2:9999/figis/ws/factsheets/", "http://localhost:8080/factsheet-web/");
-
 	String response;
 
 	@Test

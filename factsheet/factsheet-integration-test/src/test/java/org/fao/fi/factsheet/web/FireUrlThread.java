@@ -1,10 +1,7 @@
 package org.fao.fi.factsheet.web;
 
-import org.fao.fi.commons.integrationtest.tools.RestWebserviceIntegrationTest;
 
 public class FireUrlThread extends Thread {
-	RestWebserviceIntegrationTest test = new RestWebserviceIntegrationTest(
-			"http://hqldvfigis2:9999/figis/ws/factsheets/", "http://localhost:8080/factsheet-web/");
 
 	private String restUrl;
 	private Class<?> clazz;
@@ -17,7 +14,7 @@ public class FireUrlThread extends Thread {
 	}
 
 	public void run() {
-		this.object = test.unMarshall(restUrl, clazz);
+		this.object = FactsheetIntegrationTest.test.unMarshall(restUrl, clazz);
 	}
 
 	public final Object getObject() {
