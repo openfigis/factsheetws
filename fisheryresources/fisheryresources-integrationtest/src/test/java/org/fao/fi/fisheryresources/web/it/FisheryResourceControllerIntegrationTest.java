@@ -28,8 +28,8 @@ public class FisheryResourceControllerIntegrationTest {
 	public void testStocksbyFaoArea() throws Exception {
 		StocksByFaoArea response = (StocksByFaoArea) test.unMarshall("stocksbyfaoarea/faoarea/51",
 				StocksByFaoArea.class);
-		assertEquals(26, response.getInclusion().getAqResList().size(), 5);
-		assertEquals(26, response.getIntersection().getAqResList().size(), 5);
+		assertEquals(91, response.getInclusion().getAqResList().size(), 5);
+		assertEquals(91, response.getIntersection().getAqResList().size(), 5);
 	}
 
 }
