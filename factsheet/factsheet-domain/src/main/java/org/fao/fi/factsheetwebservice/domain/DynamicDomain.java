@@ -12,6 +12,6 @@ package org.fao.fi.factsheetwebservice.domain;
  */
 public enum DynamicDomain {
 
-	facp, fishery, fishtech, geartype, introsp, organization, resource, species, topic, vesseltype;
+	facp, fishery, fishtech, geartype, introsp, organization, resource, species, topic, vesseltype, vme;
 
 }

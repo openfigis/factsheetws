@@ -5,7 +5,7 @@ import org.fao.fi.commons.FigisException;
 public enum FactsheetDomain {
 
 	// dynamic domains
-	facp, fishery, fishtech, geartype, introsp, organization, resource, species, topic, vesseltype,
+	facp, fishery, fishtech, geartype, introsp, organization, resource, species, topic, vesseltype, vme,
 
 	// static domains
 	area, collection, countrysector, culturespecies, eaftool, equipment, legalframework, ontology, org, psm;
