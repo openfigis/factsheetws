@@ -12,6 +12,12 @@ public class FisheryResourceNamespace implements NamespaceContext {
 			throw new NullPointerException("Null prefix");
 		else if ("fi".equals(prefix))
 			return "http://www.fao.org/fi/figis/devcon/";
+		else if ("dc".equals(prefix))
+			return "http://purl.org/dc/elements/1.1/";
+		else if ("dcterms".equals(prefix))
+			return "http://purl.org/dc/terms/";
+		else if ("ags".equals(prefix))
+			return "http://www.purl.org/agmes/1.1/";
 		else if ("xml".equals(prefix))
 			return XMLConstants.XML_NS_URI;
 		return XMLConstants.DEFAULT_NS_PREFIX;
