@@ -26,12 +26,12 @@ public class FactsheetWebServiceClientTest {
 	@Test
 	public void testFactsheetWebServiceClient() {
 		FactsheetWebServiceClient c = new FactsheetWebServiceClient("http://www.fao.org/figis/ws/factsheets/");
-		assertEquals(19, c.retrieveDomainList().getDomainList().size(), 1);
+		assertEquals(21, c.retrieveDomainList().getDomainList().size(), 1);
 	}
 
 	@Test
 	public void testRetrieveDomainList() {
-		assertEquals(19, c.retrieveDomainList().getDomainList().size(), 1);
+		assertEquals(21, c.retrieveDomainList().getDomainList().size(), 1);
 	}
 
 	@Test
@@ -68,8 +68,8 @@ public class FactsheetWebServiceClientTest {
 
 	@Test
 	public void testPickNodeListWithXpath() {
-		Document document = c
-				.pickNodeListWithXpath("domain/resource/factsheet/10102/language/en/xpathdescendant/StandardExploitRate");
+		Document document = c.pickNodeListWithXpath(
+				"domain/resource/factsheet/10102/language/en/xpathdescendant/StandardExploitRate");
 		parseAndPrint(document);
 	}
 

@@ -1,6 +1,8 @@
 package org.fao.fi.services.factsheet.client;
 
 import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -112,11 +114,14 @@ public class FactsheetWebServiceClient {
 	}
 
 	private Document uri2Document(String uri) {
-		Document document;
 		try {
-			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			document = documentBuilder.parse(uri);
+			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+			docFactory.setNamespaceAware(true); // never forget this!
+			URL xmlUrl = new URL(uri);
+			DocumentBuilder builder = docFactory.newDocumentBuilder();
+			URLConnection urlConnection = (URLConnection) xmlUrl.openConnection();
+			urlConnection.connect();
+			return builder.parse(urlConnection.getInputStream());
 		} catch (ClassCastException e) {
 			throw new FactsheetClientException(e);
 		} catch (ParserConfigurationException e) {
@@ -126,7 +131,6 @@ public class FactsheetWebServiceClient {
 		} catch (IOException e) {
 			throw new FactsheetClientException(e);
 		}
-		return document;
 	}
 
 }
