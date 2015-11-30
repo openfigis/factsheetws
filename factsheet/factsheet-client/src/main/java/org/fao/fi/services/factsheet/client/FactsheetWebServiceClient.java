@@ -80,7 +80,8 @@ public class FactsheetWebServiceClient {
 	 * List of the available languages for that factsheet, given the domain.
 	 */
 	public LanguageList retrieveLanguageListInDomain4ThisFactsheet(FactsheetDomain domain, String factsheet) {
-		return (LanguageList) jaxbRestClient.doGet("domain/" + domain + "/factsheet/10315", LanguageList.class);
+		return (LanguageList) jaxbRestClient.doGet("domain/" + domain.toString() + "/factsheet/" + factsheet,
+				LanguageList.class);
 	}
 
 	/**
@@ -92,7 +93,6 @@ public class FactsheetWebServiceClient {
 	public Document retrieveFactsheet(String factsheet, FactsheetDomain domain, FactsheetLanguage language) {
 		String factsheetUrl = restWebserverUrl + "domain/" + domain + "/factsheet/" + factsheet + "/language/"
 				+ language;
-		System.out.println(factsheetUrl);
 		return uri2Document(factsheetUrl);
 	}
 
