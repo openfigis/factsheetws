@@ -11,13 +11,13 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.apache.log4j.Logger;
 import org.fao.fi.commons.FigisException;
+import org.fao.fi.factsheetwebservice.FactsheetException;
 import org.fao.fi.factsheetwebservice.domain.DomainList;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
 import org.fao.fi.factsheetwebservice.domain.FactsheetList;
 import org.fao.fi.factsheetwebservice.domain.LanguageList;
 import org.fao.fi.logical.domain.RetrieveFactsheetRequest;
-import org.fao.fi.services.factsheet.FactsheetException;
 import org.fao.fi.services.factsheet.FactsheetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

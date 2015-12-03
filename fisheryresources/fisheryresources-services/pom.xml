@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.fao.factsheet</groupId>
 		<artifactId>fisheryresources</artifactId>
-		<version>0.0.6</version>
+		<version>0.0.7</version>
 	</parent>
 	<artifactId>fisheryresources-services</artifactId>
 	<url>http://figisapps.fao.org/FIGISwiki/index.php/Webservice_Fishery_Resources</url>
@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>org.fao.factsheet</groupId>
 			<artifactId>resource-factsheet-marshall</artifactId>
-			<version>0.0.6</version>
+			<version>0.0.7</version>
 		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>
@@ -65,12 +65,12 @@
 		<dependency>
 			<groupId>org.fao.factsheet</groupId>
 			<artifactId>fisheryresources-domain</artifactId>
-			<version>0.0.6</version>
+			<version>0.0.7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.fao.factsheet</groupId>
 			<artifactId>factsheet-services</artifactId>
-			<version>0.0.6</version>
+			<version>0.0.7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>

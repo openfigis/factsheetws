@@ -1,9 +1,9 @@
-package org.fao.fi.services.factsheet.logic;
+package org.fao.fi.factsheetwebservice.domain.util;
 
+import org.fao.fi.factsheetwebservice.FactsheetException;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
-import org.fao.fi.services.factsheet.FactsheetException;
 
 public class FactsheetUrlComposerImpl implements FactsheetUrlComposer {
 

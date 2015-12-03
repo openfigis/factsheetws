@@ -4,7 +4,7 @@ import java.io.File;
 
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
-import org.fao.fi.services.factsheet.logic.FactsheetUrlComposer;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposer;
 
 public class FactsheetUrlComposerDummy4Testing implements FactsheetUrlComposer {
 

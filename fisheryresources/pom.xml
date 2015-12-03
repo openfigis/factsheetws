@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.fao.factsheet</groupId>
 	<artifactId>fisheryresources</artifactId>
-	<version>0.0.6</version>
+	<version>0.0.7</version>
 	<packaging>pom</packaging>
 	<properties>
 		<spring.framework.version>4.1.6.RELEASE</spring.framework.version>

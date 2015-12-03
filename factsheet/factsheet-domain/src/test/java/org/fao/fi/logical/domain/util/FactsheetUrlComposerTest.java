@@ -1,4 +1,4 @@
-package org.fao.fi.services.factsheet.logic;
+package org.fao.fi.logical.domain.util;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -6,6 +6,8 @@ import static org.junit.Assert.fail;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposer;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposerImpl;
 import org.junit.Test;
 
 public class FactsheetUrlComposerTest {

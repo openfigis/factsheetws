@@ -12,6 +12,8 @@ import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
 import org.fao.fi.factsheetwebservice.domain.StaticDomain;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposer;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposerImpl;
 import org.fao.fi.logical.domain.factsheet.search.ResultItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -9,6 +9,8 @@ import org.fao.fi.factsheet.marshall.FactsheetXmlMarshall;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetDomain;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposer;
+import org.fao.fi.factsheetwebservice.domain.util.FactsheetUrlComposerImpl;
 import org.fao.fi.figis.devcon.FIGISDoc;
 import org.fao.fi.figis.devcon.FigisID;
 import org.fao.fi.figis.devcon.ForeignID;
@@ -22,8 +24,6 @@ import org.fao.fi.fisheryresources.domain.stocksby.AqRes;
 import org.fao.fi.fisheryresources.domain.stocksby.Identifier;
 import org.fao.fi.fisheryresources.domain.stocksby.StocksByElement;
 import org.fao.fi.fisheryresources.domain.stocksby.Type;
-import org.fao.fi.services.factsheet.logic.FactsheetUrlComposer;
-import org.fao.fi.services.factsheet.logic.FactsheetUrlComposerImpl;
 import org.purl.dc.elements._1.Title;
 import org.springframework.beans.factory.annotation.Autowired;
 

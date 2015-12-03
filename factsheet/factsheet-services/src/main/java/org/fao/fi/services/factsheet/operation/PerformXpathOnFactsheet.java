@@ -14,7 +14,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.fao.fi.commons.FigisException;
-import org.fao.fi.services.factsheet.FisheryResourceNamespace;
+import org.fao.fi.factsheetwebservice.domain.util.FisheryResourceNamespace;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

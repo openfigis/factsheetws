@@ -1,5 +1,6 @@
 package org.fao.fi.services.factsheet;
 
+import org.fao.fi.factsheetwebservice.FactsheetException;
 import org.fao.fi.logical.domain.RetrieveFactsheetRequest;
 
 public class RetrieveFactsheetRequestValidation {

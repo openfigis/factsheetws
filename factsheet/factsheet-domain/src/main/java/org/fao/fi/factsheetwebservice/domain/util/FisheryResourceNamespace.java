@@ -1,4 +1,4 @@
-package org.fao.fi.services.factsheet;
+package org.fao.fi.factsheetwebservice.domain.util;
 
 import java.util.Iterator;
 

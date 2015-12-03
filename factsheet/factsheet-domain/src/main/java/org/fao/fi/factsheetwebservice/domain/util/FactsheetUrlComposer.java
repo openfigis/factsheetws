@@ -1,4 +1,4 @@
-package org.fao.fi.services.factsheet.logic;
+package org.fao.fi.factsheetwebservice.domain.util;
 
 import org.fao.fi.factsheetwebservice.domain.FactsheetDiscriminator;
 import org.fao.fi.factsheetwebservice.domain.FactsheetLanguage;

@@ -1,4 +1,4 @@
-package org.fao.fi.services.factsheet;
+package org.fao.fi.factsheetwebservice;
 
 /**
  * FactsheetException is a RuntimeException
